@@ -1,7 +1,7 @@
 import React from 'react'
 import hero from '../public/3535686.jpg'
 
-const Hero = () => {
+const Hero = ({ tagline }) => {
   return (
     <section>
       <div className="container">
@@ -12,11 +12,7 @@ const Hero = () => {
               <h1 className="my-4 text-5xl font-bold leading-tight w-full">
                 KESATO & CO
               </h1>
-              <p className="leading-normal text-2xl mb-8">
-                We build smart digital branding strategies through careful &
-                comprehensive research, utilizing self-developed tools to make
-                the process even more efficient
-              </p>
+              <p className="leading-normal text-2xl mb-8">{tagline}</p>
             </div>
             <div className="w-full md:w-3/5 py-6 text-center">
               <img className="w-full md:w-5/5 z-50" src={hero} />

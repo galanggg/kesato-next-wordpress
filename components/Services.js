@@ -5,9 +5,9 @@ const Services = () => {
   return (
     <section className="services flex">
       <div className="mx-auto overflow-hidden">
-        <div className="leftimage absolute right-0">
+        {/* <div className="leftimage absolute right-0">
           <img src={leftImage} className="" />
-        </div>
+        </div> */}
         <div className="lg:px-16 px-6">
           {/* breadcumb */}
           <nav className="bg-grey-light mr-10 p-3 rounded font-sans w-full">
