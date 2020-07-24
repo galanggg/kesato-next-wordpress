@@ -1,10 +1,11 @@
 import React from 'react'
-import hero from '../public/3535686.jpg'
+import Container from '../Container'
+import hero from '../../public/3535686.jpg'
 
 const Hero = ({ tagline }) => {
   return (
     <section>
-      <div className="container">
+      <Container>
         <div className="lg:px-16 px-6 mt-5 h-screen">
           <div className="mx-auto flex flex-col md:flex-row items-center">
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -19,7 +20,7 @@ const Hero = ({ tagline }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 const HeroBlog = ({ title, coverImage, date, author, slug, excerpt }) => {
   const heroImage = coverImage?.sourceUrl
-  console.log(heroImage)
   return (
     <section className="blog-section">
       <div className="container">

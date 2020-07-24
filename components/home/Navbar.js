@@ -1,5 +1,5 @@
 import React from 'react'
-import KESATO from '../public/kesato-header-logo.svg'
+import KESATO from '../../public/kesato-header-logo.svg'
 import Link from 'next/link'
 
 const Nav = () => {
