@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('../components/home/Navbar'))
 const Hero = dynamic(() => import('../components/home/Hero'))
 const Services = dynamic(() => import('../components/home/Services'))
+const Photography = dynamic(() => import('../components/home/Photography'))
 import { getAllPages } from '../lib/api'
 import Container from '../components/Container'
 
@@ -18,8 +19,12 @@ export default function Home({ homePage: { edges } }) {
       </Head>
       <Container>
         <Nav />
-        <Hero tagline={homepage.tagline.tagline} />
+        <Hero
+          tagline={homepage.tagline.tagline}
+          heroImage={homepage.featuredImage.node.sourceUrl}
+        />
         <Services />
+        <Photography gallery={homepage.gallery.gallery} />
       </Container>
     </>
   )

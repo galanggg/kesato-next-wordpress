@@ -1,11 +1,12 @@
 import React from 'react'
 import KESATO from '../../public/kesato-header-logo.svg'
 import Link from 'next/link'
+import Container from '../Container'
 
 const Nav = () => {
   return (
-    <header>
-      <div className="container">
+    <header className="sticky top-0 bg-white z-40">
+      <Container>
         <div className="lg:px-16 px-6 flex flex-wrap items-center lg:py-0 py-2">
           <div className="flex-1 flex justify-between items-center text-xl font-bold">
             <Link href="/">
@@ -74,7 +75,7 @@ const Nav = () => {
             </nav>
           </div>
         </div>
-      </div>
+      </Container>
     </header>
   )
 }
