@@ -1,8 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 const Card = ({ post }) => {
+  const router = useRouter()
   const excerpt = post.node.excerpt
-  console.log(excerpt)
+
   return (
     <div className="sm:max-w-md lg:max-w-xl md:max-w-lg rounded overflow-hidden shadow-lg text-white border-solid border-2 mt-4">
       <img
@@ -18,11 +21,16 @@ const Card = ({ post }) => {
           className="text-black"
           dangerouslySetInnerHTML={{ __html: excerpt }}
         ></div>
-        <Link href="posts/[slug]" as={`/posts/${post.node.slug}`}>
-          <button className="mt-4 bg-transparent hover:bg-blue-500 text-black font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
-            Read
-          </button>
-        </Link>
+        {/* <Link href="posts/[slug]" as={`/posts/${post.node.slug}`}> */}
+        <button
+          onClick={() =>
+            router.push('/posts/[slug]', `/posts/${post.node.slug}`)
+          }
+          className="mt-4 bg-transparent hover:bg-blue-500 text-black font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded"
+        >
+          Read
+        </button>
+        {/* </Link> */}
       </div>
     </div>
   )

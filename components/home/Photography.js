@@ -36,7 +36,7 @@ const Photography = ({ gallery }) => {
                 <li>
                   <span className="mx-2">/</span>
                 </li>
-                <li>photo & videography</li>
+                <li>Photography & Videography</li>
               </ol>
             </nav>
             <div className="ml-5 mt-12">

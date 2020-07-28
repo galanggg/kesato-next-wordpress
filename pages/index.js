@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('../components/home/Navbar'))
 const Hero = dynamic(() => import('../components/home/Hero'))
 const Services = dynamic(() => import('../components/home/Services'))
 const Photography = dynamic(() => import('../components/home/Photography'))
+const Videography = dynamic(() => import('../components/home/Videography'))
 import { getAllPages } from '../lib/api'
 import Container from '../components/Container'
 
@@ -13,10 +12,6 @@ export default function Home({ homePage: { edges } }) {
   console.log(homepage)
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Container>
         <Nav />
         <Hero
@@ -25,6 +20,7 @@ export default function Home({ homePage: { edges } }) {
         />
         <Services />
         <Photography gallery={homepage.gallery.gallery} />
+        <Videography videography={homepage.videography.videography.sourceUrl} />
       </Container>
     </>
   )

@@ -16,10 +16,6 @@ const HeroBlog = ({ title, coverImage, date, author, slug, excerpt }) => {
         >
           <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              {/* <a
-                className="text-white font-extrabold text-3xl md:text-5xl"
-                dangerouslySetInnerHTML={{ __html: title }}
-              /> */}
               <a className="text-white font-extrabold text-3xl md:text-5xl">
                 {title}
               </a>

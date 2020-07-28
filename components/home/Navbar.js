@@ -1,9 +1,11 @@
 import React from 'react'
 import KESATO from '../../public/kesato-header-logo.svg'
 import Link from 'next/link'
+import { useRouter, Router } from 'next/router'
 import Container from '../Container'
 
 const Nav = () => {
+  const router = useRouter()
   return (
     <header className="sticky top-0 bg-white z-40">
       <Container>
@@ -11,7 +13,12 @@ const Nav = () => {
           <div className="flex-1 flex justify-between items-center text-xl font-bold">
             <Link href="/">
               <a>
-                <img src={KESATO} id="kesato-logo" className="w-5/12" />
+                <img
+                  src={KESATO}
+                  id="kesato-logo"
+                  className="w-5/12"
+                  alt="kesato-image"
+                />
               </a>
             </Link>
           </div>
@@ -63,14 +70,12 @@ const Nav = () => {
                     LeStudio
                   </a>
                 </li>
-                <Link href="/blogs">
-                  <a
-                    className="hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-salmon-700 hover:border-blue-500 rounded shadow opacity-75"
-                    href="#"
-                  >
-                    BLOG
-                  </a>
-                </Link>
+                <button
+                  className="btn-blog hover:border-blue-500 hover:bg-blue-400 border-salmon-700"
+                  onClick={() => router.push('/blogs', `/blogs`)}
+                >
+                  BLOG
+                </button>
               </ul>
             </nav>
           </div>
