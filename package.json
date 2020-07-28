@@ -19,8 +19,10 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
     "node-sass": "^4.14.1",
+    "nprogress": "^0.2.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10"
   },
   "devDependencies": {
     "next-images": "^1.4.0",
