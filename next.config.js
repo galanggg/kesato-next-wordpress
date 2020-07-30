@@ -4,6 +4,7 @@ const optimizedImages = require('next-optimized-images')
 //Tailwind
 const withSass = require('@zeit/next-sass')
 const tailwindCss = require('tailwindcss')
+
 module.exports = withPlugins([
   [
     optimizedImages,

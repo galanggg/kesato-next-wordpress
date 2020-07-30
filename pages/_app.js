@@ -24,14 +24,14 @@ Router.onRouteChangeError = () => {
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <html lang="en">
+    <div>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Create Next App</title>
+        <title>KESATO</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
-    </html>
+    </div>
   )
 }

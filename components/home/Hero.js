@@ -15,7 +15,11 @@ const Hero = ({ tagline, heroImage }) => {
               <p className="leading-normal text-2xl mb-8">{tagline}</p>
             </div>
             <div className="w-full md:w-3/5 py-6 text-center">
-              <img className="w-full md:w-5/5 z-50" src={heroImage} />
+              <img
+                className="w-full md:w-5/5 z-50"
+                src={heroImage}
+                alt="hero-image"
+              />
             </div>
           </div>
         </div>

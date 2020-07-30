@@ -18,7 +18,7 @@ const Videography = ({ videography }) => {
             </div>
           </div>
           <div className="image-video pt-5">
-            <img className="object-cover" src={videography} />
+            <img className="object-cover" src={videography} alt="video-image" />
           </div>
         </div>
       </Container>
