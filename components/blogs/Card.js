@@ -1,18 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const Card = ({ post }) => {
   const router = useRouter()
   const excerpt = post.node.excerpt
+  const imageConvert = `${post.node.featuredImage.node.sourceUrl}?lqip`
+
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  const styles = {
+    lqip: {
+      filter: 'blur(10px)',
+    },
+  }
+
+  // Hide preview when image has loaded.
+  if (imageLoaded) {
+    styles.lqip.opacity = 0
+  }
 
   return (
     <div className="sm:max-w-md lg:max-w-xl md:max-w-lg rounded overflow-hidden shadow-lg text-white border-solid border-2 mt-4">
-      <img
-        className="w-full"
-        src={post.node.featuredImage.node.sourceUrl}
-        alt="Sunset in the mountains"
-      ></img>
+      <div className="relative">
+        <img
+          className="absolute top-0 left-0 z-10 w-full transition-opacity duration-500 ease-in opacity-100"
+          src={imageConvert}
+          alt="image"
+          style={styles.lqip}
+        ></img>
+        <img
+          className="w-full"
+          src={post.node.featuredImage.node.sourceUrl}
+          alt="image"
+          onLoad={() => setImageLoaded(true)}
+        />
+      </div>
       <div className="px-6 py-4">
         <div className="font-bold text-black text-xl mb-2">
           {post.node.title}
