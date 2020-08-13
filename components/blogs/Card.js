@@ -12,6 +12,7 @@ const Card = ({ post }) => {
   const styles = {
     lqip: {
       filter: 'blur(10px)',
+      opacity: 1,
     },
   }
 
