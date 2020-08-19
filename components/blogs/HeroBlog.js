@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import { LazyImage } from '../../lib/lazyimage'
+import { Base64 } from 'js-base64'
 
 const HeroBlog = ({ title, coverImage, date, author, slug, excerpt }) => {
   const heroImage = coverImage?.sourceUrl

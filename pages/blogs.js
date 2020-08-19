@@ -38,6 +38,7 @@ export async function getStaticProps({ preview = false }) {
       allPosts,
       preview,
     },
+    unstable_revalidate: 1,
   }
 }
 

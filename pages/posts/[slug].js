@@ -3,6 +3,7 @@ import { getPostAndMorePosts, getAllPostsWithSlug } from '../../lib/api'
 import Link from 'next/link'
 
 const Post = ({ post, posts }) => {
+  console.log(post)
   const router = useRouter()
   const morePosts = posts?.edges
 

@@ -1,40 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { LazyImage } from '../../lib/lazyimage'
+import { Base64 } from 'js-base64'
 
 const Card = ({ post }) => {
   const router = useRouter()
   const excerpt = post.node.excerpt
-  const imageConvert = `${post.node.featuredImage.node.sourceUrl}?lqip`
-
-  const [imageLoaded, setImageLoaded] = useState(false)
-
-  const styles = {
-    lqip: {
-      filter: 'blur(10px)',
-      opacity: 1,
-    },
-  }
-
-  // Hide preview when image has loaded.
-  if (imageLoaded) {
-    styles.lqip.opacity = 0
-  }
 
   return (
     <div className="sm:max-w-md lg:max-w-xl md:max-w-lg rounded overflow-hidden shadow-lg text-white border-solid border-2 mt-4">
-      <div className="relative">
-        <img
-          className="absolute top-0 left-0 z-10 w-full transition-opacity duration-500 ease-in opacity-100"
-          src={imageConvert}
-          alt="image"
-          style={styles.lqip}
-        ></img>
-        <img
+      <div className="wrapper">
+        <LazyImage
           className="w-full"
+          aspectRatio={16 / 9}
+          // lqip="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAUACYDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAQGBwEF/8QALhAAAgEDAgQEBAcAAAAAAAAAAQIDAAQRBRIGITFBBxMikTJRgbEVFkJhYnGh/8QAFgEBAQEAAAAAAAAAAAAAAAAABAMC/8QAHhEAAgICAgMAAAAAAAAAAAAAAAIBAxESITEyM1H/2gAMAwEAAhEDEQA/AKdpOiaOHUvYzs2wJkZwB860Dg/QbKxvIntLZkLyB2Dsctjn3qPZ6JqDoRHPatjphtpHuKi8TaxJwzabblliunOEO4MCRjv9aKuWbECZ1WMlz8QdJGu2MrpBDaX1uoeKbzAQe+04+/Y1n35cW5tUubGdkWT48+rDd/8Aar3F3G9xqkCx2mYIgm2RlyDI3T2PXlUHw/1S/E2oWspmWJlEkLHKq20AMA3TuOVVsqbTJiHSW1JGqcIzysQ1yylXOCUxkUr0bi6uJG3Sv8PpCh8/WlRiW+mtENe06OMBB5antzH7VmvjnaRbbaQAq8YAUj+XI/YUpSa/Ii/RXNI0Kxn8Fte1x4z+J2N5EkMwPRSUBGOn6z7D5VbdFUbEhb1RhgmG59uZ/ulKdVyjg7vZWdvNJtJcF4+eTzHKlKUAcf/Z"
+          lqip={Base64.btoa(post.node.featuredImage.node.sourceUrl)}
           src={post.node.featuredImage.node.sourceUrl}
-          alt="image"
-          onLoad={() => setImageLoaded(true)}
+          alt="img"
         />
       </div>
       <div className="px-6 py-4">
