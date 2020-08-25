@@ -43,10 +43,10 @@ const Photography = ({ gallery }) => {
               <h1 className="font-bold text-5xl">Photography</h1>
               <p className="max-w-4xl font-medium pt-8">
                 We provide various photography services indoor or outdoor,
-                including product shooting,fash- ion, model portfolio, headshots
+                including product shooting,fashion, model portfolio, headshots
                 etc. Our team come together to produce superior quality images
                 for your website, <br />
-                social /printed media, electronic marketing and more. Drop us
+                social/printed media, electronic marketing and more. Drop us
                 your en- quiries!
               </p>
             </div>

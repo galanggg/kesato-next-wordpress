@@ -1,5 +1,15 @@
 import React from 'react'
 import Container from '../Container'
+import tw, { styled } from 'twin.macro'
+
+//Example using twin.macro and styled components
+const MyButton = styled.button(({ isBold, isPrimary }) => [
+  tw`mt-5 ml-5 border-2 border-blue-500 px-4 py-2`,
+  // Ternary
+  isBold ? tw`font-bold` : tw`font-semibold`,
+  // Conditional Style
+  isPrimary && tw`text-white bg-blue-500`,
+])
 
 const Footer = () => {
   return (
@@ -31,6 +41,8 @@ const Footer = () => {
               <strong>Phone:</strong> (0361) 4740834
               <br />
               <strong>Email:</strong> hello@kesato.com
+              <br />
+              <MyButton isPrimary>Get in touch</MyButton>
             </p>
           </div>
         </div>
