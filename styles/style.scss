@@ -4,6 +4,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .btn-blog {
@@ -90,4 +91,8 @@ html {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.main-hero-wrapper {
+  height: calc(100vh - 58px);
 }

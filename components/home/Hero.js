@@ -1,12 +1,11 @@
 import React from 'react'
 import Container from '../Container'
-
 const Hero = ({ tagline, heroImage }) => {
   return (
     <section>
       <Container>
-        <div className="lg:px-16 px-6 pt-10 h-screen">
-          <div className="mx-auto flex flex-col md:flex-row items-center">
+        <div className="main-hero-wrapper">
+          <div className="mx-auto flex flex-col md:flex-row items-center justify-center h-full">
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
               <p className="uppercase tracking-loose w-full">KESATO & CO</p>
               <h1 className="my-4 text-5xl font-bold leading-tight w-full">
