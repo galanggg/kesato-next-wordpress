@@ -1,5 +1,5 @@
 import React from 'react'
-import KESATO from '../../public/kesato-header-logo.svg'
+// import KESATO from '../../public/kesato-header-logo.svg'
 import Link from 'next/link'
 import { useRouter, Router } from 'next/router'
 import Container from '../Container'
@@ -14,7 +14,7 @@ const Nav = () => {
             <Link href="/">
               <a>
                 <img
-                  src={KESATO}
+                  src="/kesato-header-logo.svg"
                   id="kesato-logo"
                   className="w-5/12"
                   alt="kesato-image"
