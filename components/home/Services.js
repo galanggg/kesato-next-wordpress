@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-8`
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center`
-const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`
+const HeadingDescription = tw.p`mt-4 font-bold text-gray-600 text-center max-w-md text-gray-800`
 
 const Content = tw.div`mt-16`
 
@@ -84,7 +84,9 @@ const Services = () => {
             <SingleColumn>
               <HeadingInfoContainer>
                 <HeadingDescription>
-                  Here are some of the services
+                  "We build smart digital branding strategies through careful &
+                  comprehensive research, utilizing self-developed tools to make
+                  the process even more efficient."
                 </HeadingDescription>
               </HeadingInfoContainer>
 
