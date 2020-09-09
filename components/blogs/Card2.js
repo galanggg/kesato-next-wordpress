@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { LazyImage } from '../../lib/lazyimage'
 import { Base64 } from 'js-base64'
 
-const Card = ({ post }) => {
+const Card2 = ({ post }) => {
   const router = useRouter()
   const excerpt = post.node.excerpt
 
@@ -47,4 +47,4 @@ const Card = ({ post }) => {
   )
 }
 
-export default Card
+export default Card2

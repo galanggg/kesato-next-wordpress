@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import { getAllPostsForHome } from '../lib/api'
 import { motion } from 'framer-motion'
 
+//Animation for blog section
 let easing = [0.175, 0.85, 0.42, 0.96]
 
 const imageVariants = {
@@ -20,6 +21,7 @@ const imageVariants = {
     },
   },
 }
+//End of animation
 
 const Blogs = ({ allPosts: { edges }, preview }) => {
   const heroPost = edges[0]?.node

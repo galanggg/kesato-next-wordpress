@@ -59,9 +59,9 @@ const Post = ({ post, posts }) => {
           </div>
         </div>
       )}
-      <div class="absolute top-0 left-0 h-12 w-18 p-4">
+      <div className="absolute top-0 left-0 h-12 w-18 p-4">
         <Link href="/blogs">
-          <button class="js-change-theme focus:outline-none">◀️</button>
+          <button className="js-change-theme focus:outline-none">◀️</button>
         </Link>
       </div>
     </div>
