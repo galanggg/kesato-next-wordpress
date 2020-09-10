@@ -25,7 +25,7 @@ const imageVariants = {
 }
 //End of animation
 
-const PostsQuery = gql`
+export const PostsQuery = gql`
   query GET_PAGINATED_POSTS(
     $first: Int
     $last: Int

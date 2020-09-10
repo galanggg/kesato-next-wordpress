@@ -4,6 +4,8 @@ import Head from 'next/head'
 import React from 'react'
 import NProgress from 'nprogress'
 import '../styles/style.scss'
+import { ApolloProvider } from '@apollo/client'
+import { useApollo } from '../lib/ApolloClient'
 
 NProgress.configure({ showSpinner: false })
 
@@ -23,15 +25,21 @@ Router.onRouteChangeError = () => {
 }
 
 export default function MyApp({ Component, pageProps }) {
+  const apolloClient = useApollo(pageProps.initialApolloState)
   return (
-    <div>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>KESATO</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Component {...pageProps} />
-    </div>
+    <ApolloProvider client={apolloClient}>
+      <div>
+        <Head>
+          <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>KESATO</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Component {...pageProps} />
+      </div>
+    </ApolloProvider>
   )
 }

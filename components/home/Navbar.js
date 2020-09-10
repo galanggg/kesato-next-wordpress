@@ -76,6 +76,14 @@ const Nav = () => {
                 >
                   BLOG
                 </button>
+                <button
+                  className="btn-blog hover:border-blue-500 hover:bg-blue-400 border-salmon-700"
+                  onClick={() =>
+                    router.push('/experimentblogs', `/experimentblogs`)
+                  }
+                >
+                  Experiment Blog
+                </button>
               </ul>
             </nav>
           </div>
