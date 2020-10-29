@@ -14,6 +14,7 @@ const VideographyHenry = dynamic(() =>
 
 import { getAllPages } from '../lib/api'
 import Container from '../components/Container'
+import HeroVideo from '../components/home/HeroVideo'
 
 export default function Home({ homePage: { edges } }) {
   const homepage = edges[0]?.node
@@ -21,13 +22,8 @@ export default function Home({ homePage: { edges } }) {
   return (
     <>
       <Nav />
-      <div className="py-24">
-        <CaseStudy />
-      </div>
-      <VideographyHenry
-        videography={homepage.videography.videography.sourceUrl}
-      />
-      {/* <Container>
+      <HeroVideo videography="https://next.kesato.io/wp-content/uploads/2020/07/video.png"></HeroVideo>
+      <Container>
         <Hero
           tagline={homepage.tagline.tagline}
           heroImage={homepage.featuredImage.node.sourceUrl}
