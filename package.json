@@ -35,14 +35,15 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "^6.3.0",
+    "react-player": "^2.6.2",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1",
-    "twin.macro": "^1.7.0",
+    "twin.macro": "^1.11.1",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "next-images": "^1.4.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.9.0"
   }
 }

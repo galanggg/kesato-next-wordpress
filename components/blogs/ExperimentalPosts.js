@@ -84,7 +84,7 @@ const Posts = () => {
     posts: { pageInfo },
   } = data
   // console.log(edges)
-  console.log(pageInfo)
+  // console.log(pageInfo)
 
   const heroPost = edges[0]?.node
   const morePost = edges.slice(1)

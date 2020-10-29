@@ -43,6 +43,7 @@ const imageVariants = {
 */
 
 const Experimental = () => {
+  
   return (
     // <ApolloProvider client={apolloClient}>
     <div className="blogs">

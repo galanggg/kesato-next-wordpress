@@ -7,6 +7,10 @@ const Videography = dynamic(() => import('../components/home/Videography'))
 const OurClient = dynamic(() => import('../components/home/OurClient'))
 const Contact = dynamic(() => import('../components/home/Contact'))
 const Footer = dynamic(() => import('../components/home/Footer'))
+const CaseStudy = dynamic(() => import('../components/home/CaseStudy'))
+const VideographyHenry = dynamic(() =>
+  import('../components/home/VideographyHenry'),
+)
 
 import { getAllPages } from '../lib/api'
 import Container from '../components/Container'
@@ -16,8 +20,14 @@ export default function Home({ homePage: { edges } }) {
   console.log(homepage)
   return (
     <>
-      <Container>
-        <Nav />
+      <Nav />
+      <div className="py-24">
+        <CaseStudy />
+      </div>
+      <VideographyHenry
+        videography={homepage.videography.videography.sourceUrl}
+      />
+      {/* <Container>
         <Hero
           tagline={homepage.tagline.tagline}
           heroImage={homepage.featuredImage.node.sourceUrl}
@@ -28,7 +38,7 @@ export default function Home({ homePage: { edges } }) {
         <OurClient client={homepage.client.client} />
         <Contact />
       </Container>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
