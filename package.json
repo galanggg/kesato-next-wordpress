@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start"
   },
@@ -27,10 +27,9 @@
     "js-base64": "^3.4.5",
     "lqip-loader": "^2.2.0",
     "masonic": "^3.3.3",
-    "next": "9.4.4",
+    "next": "^10.0.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
-    "node-sass": "^4.14.1",
     "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -40,6 +39,7 @@
     "react-youtube": "^7.13.0",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1",
+    "swiper": "^6.3.5",
     "twin.macro": "^1.7.0",
     "webp-loader": "^0.6.0"
   },

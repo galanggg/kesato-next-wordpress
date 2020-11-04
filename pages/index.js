@@ -11,25 +11,25 @@ const Footer = dynamic(() => import('../components/home/Footer'))
 import { getAllPages } from '../lib/api'
 import Container from '../components/Container'
 import HeroVideo from '../components/home/HeroVideo'
+import BeforeService from '../components/BeforeServices'
 
 export default function Home({ homePage: { edges } }) {
   const homepage = edges[0]?.node
   console.log(homepage)
   return (
     <>
-        <Nav />
-        <HeroVideo videography="https://next.kesato.io/wp-content/uploads/2020/07/video.png"></HeroVideo>
-        <Container>
-        <Hero
-          tagline={homepage.tagline.tagline}
-          heroImage={homepage.featuredImage.node.sourceUrl}
-        />
-        <Services />
-        <Photography gallery={homepage.gallery.gallery} />
-        <Videography videography={homepage.videography.videography.sourceUrl} />
-        <OurClient client={homepage.client.client} />
-        <Contact />
-      </Container>
+      <Nav />
+      <HeroVideo videography="https://next.kesato.io/wp-content/uploads/2020/07/video.png"></HeroVideo>
+      <Hero
+        tagline={homepage.tagline.tagline}
+        heroImage={homepage.featuredImage.node.sourceUrl}
+      />
+      <BeforeService />
+      <Services />
+      <Photography gallery={homepage.gallery.gallery} />
+      <Videography videography={homepage.videography.videography.sourceUrl} />
+      <OurClient client={homepage.client.client} />
+      <Contact />
       <Footer />
     </>
   )

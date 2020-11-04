@@ -15,14 +15,19 @@ html {
   src: url('/font/CircularStd-Medium.otf');
 }
 
+@font-face {
+  font-family: 'Kesato-light';
+  font-style: normal;
+  // font-weight: 400;
+  font-display: swap;
+  src: url('/font/CircularStd-Book.otf');
+}
+
 body {
   background-color: #eeefec;
   font-family: 'Kesato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.btn-blog {
-  @apply text-black font-bold py-2 px-4 border-b-4 rounded shadow opacity-75;
+  color: #3e4543;
 }
 
 /* Make clicks pass-through */
@@ -114,6 +119,7 @@ body {
 .navbar-right {
   font-size: 14px;
   height: 50px;
+  color: black;
 
   a {
     display: block;
@@ -140,7 +146,7 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 100px;
   position: relative;
 }
 
@@ -165,15 +171,206 @@ body {
   width: 100%;
   // padding-left: 30px;
   // padding-right: 30px;
-  text-align: center;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 90px;
+  padding-top: 100px;
   justify-content: center;
+}
+
+.kesato-jobs {
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .jobs {
   width: auto;
   padding-left: 15px;
+  font-family: Kesato-light, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding-right: 15px;
+}
+
+.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.wrapper-beforeservice {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  font-size: 24px;
+}
+
+.agency-logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: -30px;
+  right: -60px;
+}
+
+.wraper-service {
+  padding-top: 200px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.row-services {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.content-left {
+  flex: 0 0 120px;
+  max-width: 120px;
+}
+
+.content-right {
+  flex-grow: 1;
+  padding-left: 150px;
+}
+
+.dots-right {
+  position: absolute;
+  width: 400px;
+  right: 0;
+  top: 0;
+}
+
+.service-title h1 {
+  font-size: 48px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.abstract-left {
+  margin-top: -50px;
+  width: 100px;
+}
+
+.creative-menu h2 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.row-carousel {
+  // display: flex;
+  width: 100%;
+  position: relative;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.coloumn-left-carousel {
+  // flex: 0 0 25%;
+  // max-width: 25%;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+}
+.coloumn-right-carousel {
+  // flex: 0 0 75%;
+  // max-width: 75%;
+  padding-left: 35px;
+  float: left;
+  width: 75%;
+  min-height: 1px;
+}
+
+.wrapper-carousel {
+  width: 100%;
+}
+
+.photo-swiper {
+  height: 60vh;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .emblembe {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    left: 10px;
+    bottom: 15px;
+
+    svg {
+      // fill: #85c6a4;
+      fill: #fff;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: rgba(226, 104, 54, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &.webdev {
+    &:before {
+      background: rgba(133, 198, 164, 0.7);
+    }
+
+    .emblembe svg {
+      fill: #85c6a4;
+    }
+  }
+
+  &.socmed {
+    &::before {
+      background: rgba(244, 185, 195, 0.7);
+    }
+
+    .emblembe svg {
+      fill: #f4b9c3;
+    }
+  }
+
+  &.dkv {
+    &::before {
+      background: rgba(226, 104, 54, 0.7);
+    }
+
+    .emblembe svg {
+      fill: #e26836;
+    }
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+      top: 0;
+      visibility: visible;
+    }
+
+    .emblembe svg {
+      fill: white;
+    }
+  }
 }

@@ -44,39 +44,31 @@ const Nav = () => {
             className="hidden lg:flex lg:items-center lg:w-auto w-full"
             id="menu"
           >
-            <nav className= "border-solid border border-black">
-    
+            <nav className="border-solid border border-black">
               <ul className="navbar-right lg:flex items-center justify-between text-base text-black-700 ">
                 <li className="relative">
-                  <a  href="#"
-                  >
-                    Services
-                  </a>
+                  <a href="#">Services</a>
                 </li>
                 <li className="relative">
-                  <a href="#"
-                  >
-                    Case Study
-                  </a>
+                  <a href="#">Case Study</a>
                 </li>
                 <li className="relative">
-                  <a 
-                    href="#"
-                  >
-                    Le Studio
-                  </a>
+                  <a href="#">Le Studio</a>
                 </li>
                 <li>
-                  <a href="#"
-                  >
-                    <svg viewBox="0 0 100 80" width="20" height="18" fill="#3E4543">
-                      <rect width="100" height="10" ></rect>
+                  <a href="#">
+                    <svg
+                      viewBox="0 0 100 80"
+                      width="20"
+                      height="18"
+                      fill="#3E4543"
+                    >
+                      <rect width="100" height="10"></rect>
                       <rect y="25" width="100" height="10"></rect>
                       <rect y="50" width="65" height="10"></rect>
                     </svg>
                   </a>
                 </li>
-                
               </ul>
             </nav>
           </div>
