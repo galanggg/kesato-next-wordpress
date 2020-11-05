@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('../components/home/Navbar'))
 const Hero = dynamic(() => import('../components/home/Hero'))
 const Services = dynamic(() => import('../components/home/Services'))
+const Team = dynamic(() => import('../components/home/Team'))
 const Photography = dynamic(() => import('../components/home/Photography'))
 const Videography = dynamic(() => import('../components/home/Videography'))
 const OurClient = dynamic(() => import('../components/home/OurClient'))
@@ -26,9 +27,11 @@ export default function Home({ homePage: { edges } }) {
       />
       <BeforeService />
       <Services />
+      <Team />
+      <OurClient client={homepage.client.client} />
       <Photography gallery={homepage.gallery.gallery} />
       <Videography videography={homepage.videography.videography.sourceUrl} />
-      <OurClient client={homepage.client.client} />
+
       <Contact />
       <Footer />
     </>
