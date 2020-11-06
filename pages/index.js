@@ -29,10 +29,6 @@ export default function Home({ homePage: { edges } }) {
       <Services />
       <Team />
       <OurClient client={homepage.client.client} />
-      <Photography gallery={homepage.gallery.gallery} />
-      <Videography videography={homepage.videography.videography.sourceUrl} />
-
-      <Contact />
       <Footer />
     </>
   )

@@ -162,6 +162,9 @@ const Team = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry
             </p>
+            <div className="see-more">
+              <a href=""> See More Detail </a>
+            </div>
           </div>
           <div className="team-video">
             <div className="team-video-box">
