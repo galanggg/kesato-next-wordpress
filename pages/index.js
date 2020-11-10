@@ -16,10 +16,9 @@ import BeforeService from '../components/BeforeServices'
 
 export default function Home({ homePage: { edges } }) {
   const homepage = edges[0]?.node
-  console.log(homepage)
+  console.log(homepage.client.client)
   return (
     <>
-      <Nav />
       <HeroVideo videography="https://next.kesato.io/wp-content/uploads/2020/07/video.png"></HeroVideo>
       <Hero
         tagline={homepage.tagline.tagline}
@@ -29,7 +28,6 @@ export default function Home({ homePage: { edges } }) {
       <Services />
       <Team />
       <OurClient client={homepage.client.client} />
-      <Footer />
     </>
   )
 }

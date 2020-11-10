@@ -6,6 +6,8 @@ import NProgress from 'nprogress'
 import '../styles/style.scss'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/ApolloClient'
+import Footer from '../components/home/Footer'
+import Navbar from '../components/home/Navbar'
 
 NProgress.configure({ showSpinner: false })
 
@@ -38,7 +40,9 @@ export default function MyApp({ Component, pageProps }) {
           <title>KESATO</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </ApolloProvider>
   )

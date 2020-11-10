@@ -33,7 +33,7 @@
     "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-hook-form": "^6.3.0",
+    "react-hook-form": "^6.11.0",
     "react-player": "^2.6.2",
     "react-video-js-player": "^1.1.1",
     "react-youtube": "^7.13.0",

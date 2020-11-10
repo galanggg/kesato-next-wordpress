@@ -6,8 +6,39 @@ const ImgClient = styled.img`
   filter: invert(1);
 `
 
+const images = [
+  { sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/karma.png' },
+  { sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/cuen.png' },
+  {
+    sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/nitihara.png',
+  },
+  {
+    sourceUrl:
+      'https://next.kesato.io/wp-content/uploads/2020/09/malamadre.png',
+  },
+  { sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/ambre.png' },
+  {
+    sourceUrl:
+      'https://next.kesato.io/wp-content/uploads/2020/09/soo-santai.png',
+  },
+  {
+    sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/le-petit.png',
+  },
+  {
+    sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/whotels.png',
+  },
+  { sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/ps.png' },
+  {
+    sourceUrl:
+      'https://next.kesato.io/wp-content/uploads/2020/09/motel-mexicola.png',
+  },
+  {
+    sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/da-maria.png',
+  },
+  { sourceUrl: 'https://next.kesato.io/wp-content/uploads/2020/09/bw.png' },
+]
+
 const OurClient = ({ client }) => {
-  const images = client
   console.log(images)
   return (
     <section className="client">
