@@ -532,10 +532,6 @@ section.footer {
   margin: 0 auto;
 }
 
-.about-content {
-  padding-top: 120px;
-  position: relative;
-}
 .about-ornaments-left {
   position: absolute;
   width: 120px;
@@ -555,20 +551,6 @@ section.footer {
   margin: 0 auto;
 }
 
-.middle-picture {
-  width: 50%;
-  position: relative;
-}
-
-.about-pict {
-  width: 100%;
-}
-
-.about-desc {
-  width: 50%;
-  padding-right: 30px;
-}
-
 .about-title h1 {
   font-size: 48px;
   font-weight: 600;
@@ -581,11 +563,6 @@ section.footer {
   height: 100px;
   bottom: -60px;
   right: -50px;
-}
-
-.culture-content {
-  padding-top: 200px;
-  position: relative;
 }
 
 .culture-dots-right {
@@ -645,4 +622,20 @@ section.footer {
   height: 100px;
   bottom: -55px;
   right: -65px;
+}
+
+.agency-logo-brand {
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  bottom: -60px;
+  right: -50px;
+}
+
+.logo-brand-left {
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  bottom: -60px;
+  left: -50px;
 }

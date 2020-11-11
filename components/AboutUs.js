@@ -6,7 +6,7 @@ const AboutUs = () => {
           <ol class="list-reset flex text-grey-dark">
             <li>
               <a href="#" class="text-blue ">
-                Home
+                home
               </a>
             </li>
             <li>
@@ -14,13 +14,13 @@ const AboutUs = () => {
             </li>
             <li>
               <a href="#" class="text-blue ">
-                Library
+                about us
               </a>
             </li>
           </ol>
         </nav>
       </div>
-      <div className="about-content ">
+      <div className="relative pt-32 ">
         <div className="about-ornaments-left">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.2 567.7">
             <g fill="none" stroke-miterlimit="10">
@@ -38,7 +38,7 @@ const AboutUs = () => {
             <h1>About Us </h1>
           </div>
           <div className="row-middle">
-            <div className="about-desc">
+            <div className="w-6/12 pr-30px about-desc">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
@@ -58,7 +58,7 @@ const AboutUs = () => {
                 to make a type specimen book.
               </p>
             </div>
-            <div className="middle-picture">
+            <div className="relative w-6/12">
               <div className="about-pict">
                 <img src="about-team.jpg" />
               </div>
