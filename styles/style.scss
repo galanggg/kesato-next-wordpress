@@ -610,3 +610,39 @@ section.footer {
   font-size: 10px;
   font-style: italic;
 }
+
+.styling-files {
+  input[type='file'] {
+    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  label {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 12px 25px;
+    cursor: pointer;
+  }
+}
+
+.join-ornaments-left {
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: 100px;
+}
+
+.join-ornaments-right {
+  position: absolute;
+  width: 110px;
+  right: 0;
+}
+
+.agency-logo-join {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: -55px;
+  right: -65px;
+}
