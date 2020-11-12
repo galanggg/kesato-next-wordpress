@@ -18,7 +18,7 @@ const JoinUs = () => {
   // }
 
   return (
-    <section className="relative team-section">
+    <section className="relative pt-48">
       <div className="join-ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ const JoinUs = () => {
               </div>
               <div>
                 <textarea
-                  className="w-full border-solid border border-black bg-transparent "
+                  className="w-full border-solid border border-black bg-transparent pt-3"
                   onChange={handleChange}
                   placeholder="Your Message"
                   name="message"

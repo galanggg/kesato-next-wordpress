@@ -1,6 +1,6 @@
 const PhotoVideography = () => {
   return (
-    <section className="relative team-section">
+    <section className="relative pt-48">
       <div className="join-ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"

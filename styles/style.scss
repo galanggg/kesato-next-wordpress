@@ -387,11 +387,6 @@ body {
   }
 }
 
-section.team-section {
-  position: relative;
-  padding-top: 150px;
-}
-
 .ornaments-left {
   position: absolute;
   width: 200px;
@@ -583,9 +578,10 @@ section.footer {
 }
 
 ::-webkit-input-placeholder {
-  color: black;
-  font-size: 10px;
+  color: #3a403f !important;
+  font-size: 14px;
   font-style: italic;
+  padding-left: 20px;
 }
 
 .styling-files {
@@ -638,4 +634,26 @@ section.footer {
   height: 100px;
   bottom: -60px;
   left: -50px;
+}
+
+.contact-ornaments-left {
+  position: absolute;
+  width: 250px;
+  left: 0;
+  top: 0;
+}
+
+.contact-ornaments-right {
+  position: absolute;
+  width: 350px;
+  right: 0;
+  top: 0;
+}
+
+.bottom-ornaments-left {
+  position: absolute;
+  width: 350px;
+  bottom: 0;
+  right: 0;
+  margin-left: 0 auto;
 }

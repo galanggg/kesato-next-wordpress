@@ -6,7 +6,6 @@ const Team = dynamic(() => import('../components/home/Team'))
 const Photography = dynamic(() => import('../components/home/Photography'))
 const Videography = dynamic(() => import('../components/home/Videography'))
 const OurClient = dynamic(() => import('../components/home/OurClient'))
-const Contact = dynamic(() => import('../components/home/Contact'))
 const Footer = dynamic(() => import('../components/home/Footer'))
 
 import { getAllPages } from '../lib/api'

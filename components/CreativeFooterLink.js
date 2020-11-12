@@ -1,23 +1,31 @@
 const CreativeFooterLink = () => {
   return (
-    <secttion>
+    <section>
       <div className=" pt-48">
         <ul className="text-3xl lg:flex items-center text-greyfont justify-center divide-x divide-greyfont leading-none">
-          <li className="px-3">
-            <a href=""> Strategy </a>
+          <li className="px-3 ">
+            <a className="hover:text-kesato" href="">
+              Strategy
+            </a>
           </li>
           <li className="px-3  ">
-            <a href=""> Marketing </a>
+            <a className="hover:text-kesato" href="">
+              Marketing
+            </a>
           </li>
           <li className="px-3 ">
-            <a href=""> Developement</a>
+            <a className="hover:text-kesato" href="">
+              Developement
+            </a>
           </li>
           <li className="px-3 ">
-            <a href=""> Creative</a>
+            <a className="hover:text-kesato" href="">
+              Creative
+            </a>
           </li>
         </ul>
       </div>
-    </secttion>
+    </section>
   )
 }
 export default CreativeFooterLink

@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import getConfig from 'next/config'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import NProgress from 'nprogress'
 import '../styles/style.scss'
 import { ApolloProvider } from '@apollo/client'
@@ -28,6 +28,10 @@ Router.onRouteChangeError = () => {
 
 export default function MyApp({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)
+
+  const [isHeader, setisHeader] = useState(true)
+  const [isFooter, setisFooter] = useState(true)
+
   return (
     <ApolloProvider client={apolloClient}>
       <div>
@@ -40,9 +44,13 @@ export default function MyApp({ Component, pageProps }) {
           <title>KESATO</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
+        {isHeader && <Navbar />}
+        <Component
+          {...pageProps}
+          setisHeader={setisHeader}
+          setisFooter={setisFooter}
+        />
+        {isFooter && <Footer />}
       </div>
     </ApolloProvider>
   )
