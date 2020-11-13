@@ -31,7 +31,7 @@ const PlayIcon = () => {
 const Team = () => {
   const [putar, setPutar] = useState(false)
   return (
-    <section className="team-section">
+    <section className="relative pt-32">
       <div className="ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"

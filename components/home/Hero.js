@@ -1,28 +1,83 @@
-import React from 'react'
-import Container from '../Container'
-const Hero = ({ tagline, heroImage }) => {
+const Hero = () => {
   return (
     <section>
-      <Container>
-        <div className="main-hero-wrapper">
-          <div className="mx-auto flex flex-col md:flex-row items-center justify-center h-full">
-            <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-              <p className="uppercase tracking-loose w-full">KESATO & CO</p>
-              <h1 className="my-4 text-5xl font-bold leading-tight w-full">
-                KESATO & CO
-              </h1>
-              <p className="leading-normal text-2xl mb-8">{tagline}</p>
-            </div>
-            <div className="w-full md:w-3/5 py-6 text-center">
+      <div className="hero-wrapper py-3 pb-24">
+        <div className="grid-container">
+          <div class="grid-item pr-1 pb-1">
+            <div className="service-card">
               <img
-                className="w-full md:w-5/5 z-50"
-                src={heroImage}
-                alt="hero-image"
+                className="absolute object-cover w-full h-full "
+                src="grid1.png"
               />
+              <div className="overlay">
+                <div className="overlay-desc">
+                  <h3>Case Study - Colors Canggu Bali</h3>
+                  <p>Social Media</p>
+                  <p>Campaign</p>
+                  <p>Managemen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item grid-no2 pr-1">
+            <div className="service-card">
+              <img
+                className="absolute object-cover w-full h-full "
+                src="grid2.png"
+              />
+              <div className="overlay">
+                <div className="overlay-desc">
+                  <h3>Case Study - Majo Villas </h3>
+                  <p>Re-Branding Your Logo</p>
+                  <p> and Business Identity </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div className="service-card">
+              <img
+                className="absolute object-cover w-full h-full "
+                src="grid3.png"
+              />
+              <div class="overlay">
+                <div className="overlay-desc">
+                  <h3>Case Study - Soo Santai</h3>
+                  <p>Simple eCommerce Solution for Small Business</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item pr-1">
+            <div className="service-card">
+              <img
+                className="absolute object-cover w-full h-full "
+                src="grid5.png"
+              />
+              <div class="overlay">
+                <div className="overlay-desc">
+                  <h3>Case Study - Ticket to The Moon</h3>
+                  <p>Custome eCommerce for Well Establish Business</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div className="service-card">
+              <img
+                className="absolute object-cover w-full h-full "
+                src="grid4.png"
+              />
+              <div class="overlay">
+                <div className="overlay-desc">
+                  <h3>Case Study - Beach Walk Bali</h3>
+                  <p> Custome Solution for Biggest Shopping Mall in Bali</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

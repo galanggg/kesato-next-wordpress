@@ -67,7 +67,7 @@ const GraphicDesigner = () => {
         <div className="relative pt-40">
           <div className="about-container-middle">
             <div className="about-title">
-              <h1>Brand Identity </h1>
+              <h1>Graphic Designer </h1>
             </div>
             <div className="row-middle">
               <div className="relative w-6/12">

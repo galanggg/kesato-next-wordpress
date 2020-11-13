@@ -1,7 +1,7 @@
 const PhotoVideography = () => {
   return (
-    <section className="relative pt-48">
-      <div className="join-ornaments-left">
+    <section className="relative pt-30">
+      <div className="photo-ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Layer_1"
@@ -80,7 +80,7 @@ const PhotoVideography = () => {
           />
         </svg>
       </div>
-      <div className="join-ornaments-right">
+      <div className="photo-ornaments-right">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.3 327.4">
           <defs />
           <g fill="none" stroke-miterlimit="10">

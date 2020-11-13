@@ -222,7 +222,7 @@ body {
 }
 
 .wraper-service {
-  padding-top: 200px;
+  padding-top: 150px;
   position: relative;
   margin-top: 50px;
 }
@@ -598,6 +598,18 @@ section.footer {
     cursor: pointer;
   }
 }
+.photo-ornaments-left {
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: 0;
+}
+
+.photo-ornaments-right {
+  position: absolute;
+  width: 110px;
+  right: 0;
+}
 
 .join-ornaments-left {
   position: absolute;
@@ -656,4 +668,71 @@ section.footer {
   bottom: 0;
   right: 0;
   margin-left: 0 auto;
+}
+
+.service-card {
+  position: relative;
+  height: 300px;
+  width: 100%;
+
+  @at-root .grid-no2 & {
+    height: 605px;
+    width: 100%;
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: -3px;
+  margin-right: -3px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+
+  &.grid-no2 {
+    grid-row: 1/3;
+    grid-column: 2;
+  }
+}
+
+.service-card .overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(63, 75, 76, 0.8);
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+  background-color: rgba(121, 200, 166, 0.8);
+}
+.overlay {
+  z-index: 10;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h3 {
+  color: white;
+  font-family: kesato-light;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.overlay p {
+  color: white;
+  font-family: kesato-light;
+  line-height: 30px;
+  text-align: left;
+}
+
+.overlay-desc {
+  max-width: 50%;
 }
