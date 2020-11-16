@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section>
-      <div className="hero-wrapper py-3 pb-24">
+    <section id="hero-id">
+      <div className="hero-wrapper pb-24">
         <div className="grid-container">
           <div class="grid-item pr-1 pb-1">
             <div className="service-card">
@@ -14,7 +14,7 @@ const Hero = () => {
                   <h3>Case Study - Colors Canggu Bali</h3>
                   <p>Social Media</p>
                   <p>Campaign</p>
-                  <p>Managemen</p>
+                  <p>Management</p>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Hero = () => {
               <div class="overlay">
                 <div className="overlay-desc">
                   <h3>Case Study - Beach Walk Bali</h3>
-                  <p> Custome Solution for Biggest Shopping Mall in Bali</p>
+                  <p>Custome Solution for Biggest Shopping Mall in Bali</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 const BrandIdentity = () => {
   return (
-    <section>
+    <section id="brandidentity-id">
       <div className="breadcrumbs">
         <nav class="bg-grey-light rounded font-sans w-full ">
           <ol class="list-reset flex text-grey-dark">
@@ -28,7 +28,7 @@ const BrandIdentity = () => {
           </ol>
         </nav>
       </div>
-      <div className="relative pt-40">
+      <div className="relative pt-32">
         <div className="about-ornaments-left">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.2 567.7">
             <g fill="none" stroke-miterlimit="10">
@@ -42,15 +42,16 @@ const BrandIdentity = () => {
         </div>
 
         <div className="about-container-middle">
-          <div className="about-title">
-            <h1>Brand Identity </h1>
+          <div className="heading-font font-semibold pb-16">
+            <h1 className="leading-none">
+              Brand <br /> Identity
+            </h1>
           </div>
           <div className="row-middle">
-            <div className="w-6/12 pr-8">
+            <div className="w-6/12 pr-8 leading-loose">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                since.
               </p>
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -60,10 +61,7 @@ const BrandIdentity = () => {
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                and scrambled it to make a type specimen book.
               </p>
             </div>
             <div className="relative w-6/12">

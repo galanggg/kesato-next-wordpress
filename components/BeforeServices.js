@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const BeforeService = () => {
   return (
     <div className="wrapper-beforeservice">
-      <div className="kesato-desc">
+      <div className="leading-relaxed">
         <p>
           " We build smart digital branding strategies through careful &
           comprehensive research, utilizing self-developed tools to make the

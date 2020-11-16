@@ -1,12 +1,14 @@
 const UiX = () => {
   return (
-    <section className=" pt-40">
+    <section className="uix-id  pt-40">
       <div className="about-container-middle">
-        <div className="about-title">
-          <h1>UI/X Design </h1>
+        <div className="heading-font font-semibold pb-16">
+          <h1 className="leading-none">
+            UI/X <br /> Design{' '}
+          </h1>
         </div>
         <div className="row-middle">
-          <div className="w-6/12 pr-8">
+          <div className="w-6/12 pr-8 leading-loose">
             <p className="pb-5">
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
@@ -23,7 +25,7 @@ const UiX = () => {
           </div>
           <div className="relative w-6/12">
             <div className="w-full">
-              <img src="brand.jpg" />
+              <img src="culture1.jpg" />
             </div>
             <div className="agency-logo-brand">
               <svg

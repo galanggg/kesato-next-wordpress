@@ -5,7 +5,7 @@ import { collectFields } from 'graphql/execution/execute'
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <section className="pt-32 pb-20">
       <div className="container-footer">
         <div className="border-solid border border-black wrapper-footer">
           <div className="col-footer col-info">

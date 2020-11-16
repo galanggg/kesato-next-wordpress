@@ -95,14 +95,16 @@ const PhotoVideography = () => {
 
       <div className="relative pt-32">
         <div className="about-container-middle">
-          <div className="about-title">
-            <h1>Photo & Videography </h1>
+          <div className="heading-font font-semibold pb-16">
+            <h1 className="leading-none">
+              Photo & <br /> Videography{' '}
+            </h1>
           </div>
           <div className="row-middle">
             <div className="relative w-6/12">
               <div>
                 <div className="w-full pr-8">
-                  <img src="photo.jpg" />
+                  <img src="gd.png" />
                 </div>
                 <div className="logo-brand-left">
                   <svg
@@ -126,7 +128,7 @@ const PhotoVideography = () => {
                 </div>
               </div>
             </div>
-            <div className="w-6/12 ">
+            <div className="w-6/12 leading-loose">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type

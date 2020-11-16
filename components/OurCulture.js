@@ -66,11 +66,11 @@ const OurCulture = () => {
         </div>
 
         <div className="about-container-middle">
-          <div className="about-title">
+          <div className="heading-font font-bold pb-16">
             <h1>Our Culture </h1>
           </div>
           <div class="row-middle">
-            <div className="culture-desc">
+            <div className=" w-8/12 pr-6 leading-loose">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
@@ -78,19 +78,15 @@ const OurCulture = () => {
               </p>
               <p className="pb-5 ">
                 Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                since the 1500s, when an unknown printer took.
               </p>
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                and scrambled it to make a type specimen book.
               </p>
             </div>
-            <div className="culture-picture">
+            <div className="w-4/12 ">
               <div className="w-full">
                 <img src="culture2.jpg" />
               </div>

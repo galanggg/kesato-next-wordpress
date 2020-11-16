@@ -147,11 +147,11 @@ const Team = () => {
       </div>
 
       <div className="container-middle">
-        <div className="team-title">
+        <div className="heading-font font-semibold pb-16">
           <h1>Team </h1>
         </div>
         <div class="row-middle">
-          <div className="team-desc">
+          <div className="team-desc leading-loose">
             <p>
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
@@ -179,7 +179,7 @@ const Team = () => {
                 onPause={() => console.log('onPause callback')}
                 onEnded={() => console.log('onEnded callback')}
                 onError={() => console.log('onError callback')}
-                light="/video-cover.png"
+                light="/kesato_cover.png"
                 playIcon={<PlayIcon />}
                 controls
               />

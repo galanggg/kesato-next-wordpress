@@ -1,6 +1,6 @@
 const GraphicDesigner = () => {
   return (
-    <section>
+    <section id="dkv-id">
       <div className="relative pt-5">
         <div class="culture-dots-right">
           <svg
@@ -66,14 +66,16 @@ const GraphicDesigner = () => {
         </div>
         <div className="relative pt-40">
           <div className="about-container-middle">
-            <div className="about-title">
-              <h1>Graphic Designer </h1>
+            <div className="heading-font font-semibold pb-16">
+              <h1 className="leading-none">
+                Graphic <br /> Designer
+              </h1>
             </div>
             <div className="row-middle">
               <div className="relative w-6/12">
                 <div>
                   <div className="w-full pr-8">
-                    <img src="culture1.jpg" />
+                    <img src="dkv.jpg" />
                   </div>
                   <div className="logo-brand-left">
                     <svg
@@ -97,7 +99,7 @@ const GraphicDesigner = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-6/12 ">
+              <div className="w-6/12 leading-loose ">
                 <p className="pb-5">
                   Lorem Ipsum has been the industry's standard dummy text ever
                   since the 1500s, when an unknown printer took a galley of type

@@ -47,10 +47,10 @@ const Nav = () => {
             <nav className="border-solid border border-black">
               <ul className="navbar-right lg:flex items-center justify-between text-base text-black-700 ">
                 <li className="relative">
-                  <a href="#">Services</a>
+                  <a href="http://localhost:3001/#service-id">Services</a>
                 </li>
                 <li className="relative">
-                  <a href="#">Case Study</a>
+                  <a href="http://localhost:3001/#hero-id">Case Study</a>
                 </li>
                 <li className="relative">
                   <a href="#">Le Studio</a>

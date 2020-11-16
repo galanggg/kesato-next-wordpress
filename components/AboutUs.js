@@ -34,28 +34,24 @@ const AboutUs = () => {
         </div>
 
         <div className="about-container-middle">
-          <div className="about-title">
+          <div className="heading-font font-semibold pb-16">
             <h1>About Us </h1>
           </div>
           <div className="row-middle">
-            <div className="w-6/12 pr-30px about-desc">
+            <div className="w-6/12 pr-6 leading-loose">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                since the 1500s. When an unknown printer took a galley of type
+                and scrambled.
               </p>
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+                since the 1500s, when an unknown printer took.
               </p>
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                and scrambled it to make a type specimen book.
               </p>
             </div>
             <div className="relative w-6/12">

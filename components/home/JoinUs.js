@@ -18,7 +18,7 @@ const JoinUs = () => {
   // }
 
   return (
-    <section className="relative pt-48">
+    <section className="relative pt-40">
       <div className="join-ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ const JoinUs = () => {
       </div>
 
       <div className="container-middle">
-        <div className="team-title">
+        <div className="heading-font font-bold pb-16">
           <h1>Join Us! </h1>
         </div>
         <div className="join-desc">

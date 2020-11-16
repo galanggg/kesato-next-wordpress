@@ -68,8 +68,8 @@ const HeroVideo = () => {
         </div>
       </div>
       <div>
-        <div className="dropdown">
-          <a href="down">
+        <div className="dropdown pb-5">
+          <a href="#hero-id">
             <svg
               id="Capa_1"
               enable-background="new 0 0 551.13 551.13"
