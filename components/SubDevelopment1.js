@@ -1,12 +1,10 @@
-import ImageAnimation from './ImageAnimation'
-
-const UiX = () => {
+const SubDevelopment1 = () => {
   return (
     <section className="uix-id  pt-40">
       <div className="about-container-middle">
         <div className="heading-font font-semibold pb-16">
           <h1 className="leading-none">
-            UI/X <br /> Design{' '}
+            Lorem <br /> Ipsum{' '}
           </h1>
         </div>
         <div className="row-middle">
@@ -26,7 +24,9 @@ const UiX = () => {
             </div>
           </div>
           <div className="relative w-6/12">
-            <ImageAnimation source="culture1.jpg" />
+            <div className="w-full">
+              <img src="rectangle.png" />
+            </div>
             <div className="agency-logo-brand">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,4 +53,5 @@ const UiX = () => {
     </section>
   )
 }
-export default UiX
+
+export default SubDevelopment1

@@ -1,6 +1,31 @@
-import ImageAnimation from './ImageAnimation'
+import { useEffect, useRef } from 'react'
+import { TimelineLite, Power2, gsap } from 'gsap'
 
 const GraphicDesigner = () => {
+  let containerwrapper = useRef(null)
+  let image = useRef(null)
+  let container = useRef(null)
+
+  let tl = new TimelineLite()
+
+  useEffect(() => {
+    const GSAP = require('gsap/CSSRulePlugin')
+    const { CSSRulePlugin } = GSAP
+    let imageReveal = CSSRulePlugin.getRule('.image-container:after')
+
+    tl.from(imageReveal, 1.4, {
+      width: '0%',
+      ease: Power2.easeInOut,
+    })
+      .to(image, 0.5, {
+        autoAlpha: 1,
+      })
+      .to(imageReveal, 1, {
+        width: '0%',
+        ease: Power2.easeInOut,
+      })
+  })
+
   return (
     <section id="dkv-id">
       <div className="relative pt-5">
@@ -76,11 +101,20 @@ const GraphicDesigner = () => {
             <div className="row-middle">
               <div className="relative w-6/12">
                 <div>
-                  <div>
-                    <div className="w-full pr-8">
-                      <ImageAnimation source="dkv.jpg" />
+                  <div ref={(el) => (containerwrapper = el)}>
+                    <div ref={(el) => (container = el)} className="w-full pr-8">
+                      <img
+                        ref={(el) => (image = el)}
+                        className="img-animation"
+                        src="dkv.jpg"
+                      />
                     </div>
                   </div>
+                  {/* <div>
+                    <div className="w-full pr-8">
+                      <img src="dkv.jpg" />
+                    </div>
+                  </div> */}
                   <div className="logo-brand-left">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

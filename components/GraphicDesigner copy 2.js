@@ -1,6 +1,52 @@
-import ImageAnimation from './ImageAnimation'
+import { useEffect, useRef } from 'react'
+import { TimelineLite, Power2, gsap } from 'gsap'
 
 const GraphicDesigner = () => {
+  // let containerwrapper = useRef(null)
+  let image = useRef(null)
+  let animateOverlay = useRef(null)
+  // let imgContainer = useRef(null)
+
+  useEffect(() => {
+    let tl = new TimelineLite()
+
+    // const GSAP = require('gsap/CSSRulePlugin')
+    // const { CSSRulePlugin } = GSAP
+    // let animateOverlay = CSSRulePlugin.getRule('.image-animate__wrapper:after')
+
+    tl.from(animateOverlay, 1, {
+      width: '0%',
+      ease: Power2.easeInOut,
+    })
+      .to(image, 0.5, {
+        autoAlpha: 1,
+      })
+      .to(animateOverlay, 1, {
+        width: '0%',
+        ease: Power2.easeInOut,
+      })
+  }, [])
+
+  // let tl = new TimelineLite()
+
+  // useEffect(() => {
+  //   const GSAP = require('gsap/CSSRulePlugin')
+  //   const { CSSRulePlugin } = GSAP
+  //   let imageReveal = CSSRulePlugin.getRule('.image-container:after')
+
+  //   tl.from(imageReveal, 1.4, {
+  //     width: '0%',
+  //     ease: Power2.easeInOut,
+  //   })
+  //     .to(image, 0.5, {
+  //       autoAlpha: 1,
+  //     })
+  //     .to(imageReveal, 1, {
+  //       width: '0%',
+  //       ease: Power2.easeInOut,
+  //     })
+  // })
+
   return (
     <section id="dkv-id">
       <div className="relative pt-5">
@@ -78,7 +124,13 @@ const GraphicDesigner = () => {
                 <div>
                   <div>
                     <div className="w-full pr-8">
-                      <ImageAnimation source="dkv.jpg" />
+                      <div className="image-animate__wrapper">
+                        <img src="dkv.jpg" ref={(el) => (image = el)} />
+                        <div
+                          ref={(el) => (animateOverlay = el)}
+                          className="bgoverlay"
+                        ></div>
+                      </div>
                     </div>
                   </div>
                   <div className="logo-brand-left">

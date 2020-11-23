@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import ReactPlayer from 'react-player/lazy'
 import styled from 'styled-components'
 import Container from '../Container'
+import { TimelineLite, Power2, gsap } from 'gsap'
 
 const PlayIcon = () => {
   return (
@@ -31,23 +32,60 @@ const PlayIcon = () => {
 
 const HeroVideo = () => {
   const [putar, setPutar] = useState(false)
+  let video = useRef(null)
+  let vidplayer = useRef(null)
+  let animationwrapper = useRef(null)
+
+  let tl = new TimelineLite()
+
+  useEffect(() => {
+    const GSAP = require('gsap/CSSRulePlugin')
+    const { CSSRulePlugin } = GSAP
+    let imageReveal = CSSRulePlugin.getRule('.animation-wrapper:after')
+
+    // tl.from(video, 1, { css: { width: 0 } }).to(imageReveal, 1.4, {
+    //   width: '0%',
+    //   ease: Power2.easeInOut,
+    // })
+
+    tl.from(imageReveal, 1.4, {
+      width: '0%',
+      ease: Power2.easeInOut,
+    })
+      .to(vidplayer, 0.5, {
+        autoAlpha: 1,
+      })
+      .to(imageReveal, 1, {
+        width: '0%',
+        ease: Power2.easeInOut,
+      })
+    // .from(vidplayer, 1.4, { scale: 1.6, ease: Power2.easeInOut, delay: -1.6 })
+  }, [])
+
   return (
     <Container>
-      <div className="video">
-        <ReactPlayer
-          width="950px"
-          height="380px"
-          url="/showreel.mp4"
-          playing={putar}
-          onReady={() => setPutar(true)}
-          onStart={() => console.log('onStart callback')}
-          onPause={() => console.log('onPause callback')}
-          onEnded={() => console.log('onEnded callback')}
-          onError={() => console.log('onError callback')}
-          light="/video-cover.png"
-          playIcon={<PlayIcon />}
-          controls
-        />
+      <div ref={(el) => (video = el)} className="video">
+        <div
+          ref={(el) => (animationwrapper = el)}
+          className="animation-wrapper w-full relative"
+        >
+          <div ref={(el) => (vidplayer = el)} className="vidplayer">
+            <ReactPlayer
+              width="100%"
+              height="380px"
+              url="/showreel.mp4"
+              playing={putar}
+              onReady={() => setPutar(true)}
+              onStart={() => console.log('onStart callback')}
+              onPause={() => console.log('onPause callback')}
+              onEnded={() => console.log('onEnded callback')}
+              onError={() => console.log('onError callback')}
+              light="/video-cover.png"
+              playIcon={<PlayIcon />}
+              controls
+            />
+          </div>
+        </div>
       </div>
       <div className="kesato-jobs">
         <div className="container">

@@ -1,3 +1,5 @@
+import ImageAnimation from './ImageAnimation'
+
 const PhotoVideography = () => {
   return (
     <section className="relative pt-30">
@@ -103,9 +105,7 @@ const PhotoVideography = () => {
           <div className="row-middle">
             <div className="relative w-6/12">
               <div>
-                <div className="w-full pr-8">
-                  <img src="gd.png" />
-                </div>
+                <ImageAnimation source="gd.png" />
                 <div className="logo-brand-left">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const PhotoVideography = () => {
                 </div>
               </div>
             </div>
-            <div className="w-6/12 leading-loose">
+            <div className="w-6/12 pl-8 leading-loose">
               <p className="pb-5">
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type

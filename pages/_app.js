@@ -8,6 +8,10 @@ import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/ApolloClient'
 import Footer from '../components/home/Footer'
 import Navbar from '../components/home/Navbar'
+import { useEffect } from 'react'
+import AOS from 'aos'
+
+import 'aos/dist/aos.css'
 
 NProgress.configure({ showSpinner: false })
 
@@ -31,6 +35,13 @@ export default function MyApp({ Component, pageProps }) {
 
   const [isHeader, setisHeader] = useState(true)
   const [isFooter, setisFooter] = useState(true)
+  useEffect(() => {
+    AOS.init({
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+    })
+  }, [])
 
   return (
     <ApolloProvider client={apolloClient}>

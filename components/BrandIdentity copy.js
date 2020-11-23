@@ -1,6 +1,37 @@
-const { default: ImageAnimation } = require('./ImageAnimation')
+import { useEffect, useRef } from 'react'
+import { TimelineLite, Power2, gsap } from 'gsap'
 
 const BrandIdentity = () => {
+  let containerwrapper = useRef(null)
+  let image = useRef(null)
+  let container = useRef(null)
+
+  let tl = new TimelineLite()
+
+  useEffect(() => {
+    const GSAP = require('gsap/CSSRulePlugin')
+    const { CSSRulePlugin } = GSAP
+    let imageReveal = CSSRulePlugin.getRule('.image-container:after')
+
+    // tl.from(video, 1, { css: { width: 0 } }).to(imageReveal, 1.4, {
+    //   width: '0%',
+    //   ease: Power2.easeInOut,
+    // })
+
+    tl.from(imageReveal, 1.4, {
+      width: '0%',
+      ease: Power2.easeInOut,
+    })
+      .to(image, 0.5, {
+        autoAlpha: 1,
+      })
+      .to(imageReveal, 1, {
+        width: '0%',
+        ease: Power2.easeInOut,
+      })
+    // .from(vidplayer, 1.4, { scale: 1.6, ease: Power2.easeInOut, delay: -1.6 })
+  })
+
   return (
     <section id="brandidentity-id">
       <div className="breadcrumbs">
@@ -67,8 +98,17 @@ const BrandIdentity = () => {
               </p>
             </div>
             <div className="relative w-6/12">
-              <div className="w-full">
-                <ImageAnimation source="brand.jpg" />
+              <div ref={(el) => (containerwrapper = el)} className="w-full">
+                <div
+                  ref={(el) => (container = el)}
+                  className="image-container relative"
+                >
+                  <img
+                    ref={(el) => (image = el)}
+                    className="img-animation"
+                    src="brand.jpg"
+                  />
+                </div>
               </div>
               <div className="agency-logo-brand">
                 <svg
