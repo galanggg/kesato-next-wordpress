@@ -43,6 +43,7 @@
     "react-video-js-player": "^1.1.1",
     "react-youtube": "^7.13.0",
     "sass": "^1.26.10",
+    "scroll-triggers": "^4.3.0",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "styled-components": "^5.1.1",
