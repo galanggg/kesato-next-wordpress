@@ -752,3 +752,18 @@ body {
     }
   }
 }
+
+.heading-animation h1 {
+  position: relative;
+  // height: 50px;
+  overflow: hidden;
+  margin: 0;
+  line-height: 1;
+}
+
+.hidetext {
+  position: relative;
+  z-index: 200;
+  display: inline-block;
+  line-height: inherit;
+}

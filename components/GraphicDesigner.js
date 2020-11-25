@@ -1,3 +1,4 @@
+import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 
 const GraphicDesigner = () => {
@@ -68,10 +69,8 @@ const GraphicDesigner = () => {
         </div>
         <div className="relative pt-40">
           <div className="about-container-middle">
-            <div className="heading-font font-semibold pb-16">
-              <h1 className="leading-none">
-                Graphic <br /> Designer
-              </h1>
+            <div className="heading-font font-semibold pb-16 heading-animation ">
+              <HeaderAnimation source="Graphic Designer" />
             </div>
             <div className="row-middle">
               <div className="relative w-6/12">

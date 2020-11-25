@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { TimelineLite, Power2, gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
@@ -13,7 +13,7 @@ const ImageAnimation = (props) => {
     ScrollTrigger.create({
       // trigger: '.image-animate__wrapper',
       trigger: image,
-      start: 'top center',
+      start: 'center bottom',
       end: 'bottom top',
       scrub: true,
       // toggleClass: '.visible', //this toggles the specified CSS class on the trigger element

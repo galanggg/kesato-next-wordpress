@@ -1,13 +1,12 @@
+import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 
 const UiX = () => {
   return (
     <section className="uix-id  pt-40">
       <div className="about-container-middle">
-        <div className="heading-font font-semibold pb-16">
-          <h1 className="leading-none">
-            UI/X <br /> Design{' '}
-          </h1>
+        <div className="heading-font font-semibold pb-16 heading-animation">
+          <HeaderAnimation source="UI/X Design" />
         </div>
         <div className="row-middle">
           <div className="w-6/12 pr-8 leading-loose">
