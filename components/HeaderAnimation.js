@@ -1,40 +1,53 @@
 import { useEffect, useRef } from 'react'
-import { TimelineLite, Power4, gsap } from 'gsap'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const HeaderAnimation = (props) => {
-  // let texTrigger = useRef(null)
-  let animateText = useRef(null)
+  const headerAnimation = useRef(null)
+  let animateText = useRef([])
   let arraytext = props.source.split(' ')
+  gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    //   gsap.registerPlugin(ScrollTrigger)
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: headerAnimation.current,
+        once: false,
+        toggleActions: 'restart none none reverse',
+        start: 'top 70%',
+      },
+    })
 
-    let tl = gsap.timeline()
-
-    //   ScrollTrigger.create({
-    //     // trigger: '.image-animate__wrapper',
-    //     trigger: texTrigger,
-    //     start: 'top center',
-    //     end: 'bottom top',
-    //     scrub: true,
-    //     // toggleClass: '.visible', //this toggles the specified CSS class on the trigger element
-    //     onEnter: () => {
-    //       console.log('enter')
-    //       tl.play()
-    //     }, //this fires the drawPoints function when the trigger enters the scroller from above
-    //   })
-
-    tl.staggerFrom(animateText, 1.5, { y: '100%', ease: Power4.easeOut }, 0.15)
+    timeline
+      .to(headerAnimation.current, {
+        autoAlpha: 1,
+      })
+      .from(
+        animateText.current,
+        {
+          y: '100%',
+        },
+        '-=0.3',
+      )
   })
 
-  return arraytext.map((text) => (
-    <h1 key={text}>
-      <span ref={(el) => (animateText = el)} className="hidetext">
-        {text}
-      </span>
-    </h1>
-  ))
+  return (
+    <div ref={headerAnimation} className="heading-section__wrapper">
+      {arraytext.map((value, index) => {
+        return (
+          <div key={value} className="heading-section__item">
+            <span
+              ref={(el) => {
+                animateText.current.push(el)
+              }}
+            >
+              {value}
+            </span>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default HeaderAnimation

@@ -753,6 +753,10 @@ body {
   }
 }
 
+.heading-animation {
+  // visibility: hidden;
+}
+
 .heading-animation h1 {
   position: relative;
   // height: 50px;
@@ -766,4 +770,51 @@ body {
   z-index: 200;
   display: inline-block;
   line-height: inherit;
+}
+
+.heading-section {
+  &__wrapper,
+  &__wrapper-baru {
+    font-size: 50px;
+    font-weight: bolder;
+    // visibility: hidden;
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      line-height: normal;
+    }
+  }
+}
+
+.animated-image {
+  &__wrapper {
+    position: relative;
+    padding-top: 90%;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #333;
+    z-index: 3;
+  }
 }

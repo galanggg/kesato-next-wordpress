@@ -1,15 +1,6 @@
-// import { useEffect } from 'react'
-// import { Power4, gsap } from 'gsap'
-
-const { default: HeaderAnimation } = require('./HeaderAnimation')
-const { default: ImageAnimation } = require('./ImageAnimation')
-
+import HeaderAnimation from './HeaderAnimation'
+import ImageAnimation from './ImageAnimation'
 const BrandIdentity = () => {
-  //   useEffect(() => {
-  //     let tl = gsap.timeline()
-  //     tl.staggerFrom('.hidetext', 1.5, { y: '100%', ease: Power4.easeOut }, 0.15)
-  //   })
-
   return (
     <section id="brandidentity-id">
       <div className="breadcrumbs">
@@ -53,7 +44,7 @@ const BrandIdentity = () => {
         </div>
 
         <div className="about-container-middle">
-          <div className="heading-font font-semibold pb-16 heading-animation">
+          <div className="heading-font font-semibold pb-16 ">
             <HeaderAnimation source="Brand Identity" />
           </div>
           <div className="row-middle">
