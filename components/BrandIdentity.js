@@ -1,5 +1,6 @@
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
+import ParagraphAnimation from './paragraphAnimation'
 const BrandIdentity = () => {
   return (
     <section id="brandidentity-id">
@@ -49,20 +50,22 @@ const BrandIdentity = () => {
           </div>
           <div className="row-middle">
             <div className="w-6/12 pr-8 leading-loose">
-              <p className="pb-5">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since.
-              </p>
-              <p className="pb-5">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
+              <ParagraphAnimation>
+                <p className="pb-5">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since.
+                </p>
+                <p className="pb-5">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
+                </p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
+                </p>{' '}
+              </ParagraphAnimation>
             </div>
             <div className="relative w-6/12">
               <div className="w-full">

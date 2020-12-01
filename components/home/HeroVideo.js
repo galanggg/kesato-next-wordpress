@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import ReactPlayer from 'react-player/lazy'
 import styled from 'styled-components'
 import Container from '../Container'

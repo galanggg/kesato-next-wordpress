@@ -21,19 +21,40 @@ const ImageAnimation = (props) => {
       width: '0%',
       ease: Power2.easeInOut,
     })
-      .to(image, 0.3, {
-        autoAlpha: 1,
-      })
-      .to(animateOverlay, 0.7, {
-        width: '0%',
-        ease: Power2.easeInOut,
-      })
+      .fromTo(
+        image,
+        {
+          autoAlpha: 0,
+          scale: 1.6,
+        },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 2,
+        },
+      )
+      .to(
+        animateOverlay,
+        0.7,
+        {
+          width: '0%',
+          ease: Power2.easeInOut,
+        },
+        '-=1.7',
+      )
   })
 
   return (
     <>
-      <div className="image-animate__wrapper" ref={wrapperImage}>
-        <img src={props.source} ref={(el) => (image = el)} />
+      <div
+        className="image-animate__wrapper overflow-hidden"
+        ref={wrapperImage}
+      >
+        <img
+          className="invisible"
+          src={props.source}
+          ref={(el) => (image = el)}
+        />
         <div ref={(el) => (animateOverlay = el)} className="bgoverlay"></div>
       </div>
     </>

@@ -8,17 +8,17 @@ const CreativeFooterLink = () => {
               Strategy
             </a>
           </li>
-          <li className="px-3  ">
+          <li className="px-3 ">
             <a className="hover:text-kesato" href="">
               Marketing
             </a>
           </li>
-          <li className="px-3 ">
+          <li className="px-3">
             <a className="hover:text-kesato" href="">
               Developement
             </a>
           </li>
-          <li className="px-3 ">
+          <li className="px-3">
             <a className="hover:text-kesato" href="">
               Creative
             </a>
