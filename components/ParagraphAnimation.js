@@ -3,18 +3,18 @@ import { gsap, Power3 } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const ParagraphAnimation = ({ children }) => {
-  const paragraphAnimation = useRef(null)
+  const pAnimation = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: paragraphAnimation.current,
+        trigger: pAnimation.current,
         toggleActions: 'restart none none reverse',
         start: 'top 70%',
       },
     })
-    timeline.from(paragraphAnimation.current, 1, {
+    timeline.from(pAnimation.current, 1, {
       y: 50,
       opacity: 0,
       ease: Power3.easeOut,
@@ -23,7 +23,7 @@ const ParagraphAnimation = ({ children }) => {
 
   return (
     <>
-      <div ref={paragraphAnimation} className="container pb-5">
+      <div ref={pAnimation} className="container pb-5">
         {children}
       </div>
     </>

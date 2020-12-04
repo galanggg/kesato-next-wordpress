@@ -42,14 +42,14 @@ const HeroVideo = () => {
     const { CSSRulePlugin } = GSAP
     let imageReveal = CSSRulePlugin.getRule('.animation-wrapper:after')
 
-    tl.from(imageReveal, 1.4, {
+    tl.from(imageReveal, 1, {
       width: '0%',
       ease: Power2.easeInOut,
     })
-      .to(vidplayer, 0.5, {
+      .to(vidplayer, 0.2, {
         autoAlpha: 1,
       })
-      .to(imageReveal, 1, {
+      .to(imageReveal, 0.7, {
         width: '0%',
         ease: Power2.easeInOut,
       })
@@ -83,8 +83,8 @@ const HeroVideo = () => {
       <div className="kesato-jobs">
         <div className="container">
           <div className="row row-jobs">
-            <div className="kesato-jobs">
-              <p> We love/ We do</p>
+            <div className="kesato-jobs font-semibold	">
+              <JobsHeroAnimate source="Web love/ We do" />
             </div>
             <div className="jobs">
               <JobsHeroAnimate source="Web Development" />

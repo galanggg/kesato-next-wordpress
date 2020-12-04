@@ -1,6 +1,6 @@
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
-import ParagraphAnimation from './paragraphAnimation'
+import ParagraphAnimation from './ParagraphAnimation'
 
 const GraphicDesigner = () => {
   return (

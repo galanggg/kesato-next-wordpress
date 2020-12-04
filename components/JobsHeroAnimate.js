@@ -13,7 +13,7 @@ const JobsHeroAnimate = (props) => {
         trigger: headerAnimation.current,
         once: false,
         toggleActions: 'restart none none reverse',
-        start: 'top 70%',
+        start: 'top 90%',
       },
     })
 
