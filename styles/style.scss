@@ -818,3 +818,13 @@ body {
     z-index: 3;
   }
 }
+
+.jobs-section {
+  &__item {
+    overflow: hidden;
+    span {
+      display: inline-block;
+      line-height: normal;
+    }
+  }
+}

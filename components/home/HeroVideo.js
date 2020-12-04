@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
 import Container from '../Container'
 import { TimelineLite, Power2, gsap } from 'gsap'
+import JobsHeroAnimate from '../JobsHeroAnimate'
 
 const PlayIcon = () => {
   return (
@@ -86,13 +87,12 @@ const HeroVideo = () => {
               <p> We love/ We do</p>
             </div>
             <div className="jobs">
-              <p>Web Development</p>
-              <p>Graphic Design</p>
-              <p>Photo & Video</p>
+              <JobsHeroAnimate source="Web Development" />
+              <JobsHeroAnimate source="Graphic Design" />
             </div>
             <div className="jobs">
-              <p>Social Media</p>
-              <p>Digital Marketing</p>
+              <JobsHeroAnimate source="Social Media" />
+              <JobsHeroAnimate source="Digital Marketing" />
             </div>
           </div>
         </div>
