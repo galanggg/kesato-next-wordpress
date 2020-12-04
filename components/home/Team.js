@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import ReactPlayer from 'react-player/lazy'
 import styled from 'styled-components'
+import PerLineAnimate from '../PerLineAnimate'
 
 const PlayIcon = () => {
   return (
@@ -148,7 +149,10 @@ const Team = () => {
 
       <div className="container-middle">
         <div className="heading-font font-semibold pb-16">
-          <h1>Team </h1>
+          <PerLineAnimate>
+            {' '}
+            <h1>Team </h1>
+          </PerLineAnimate>
         </div>
         <div class="row-middle">
           <div className="team-desc leading-loose">

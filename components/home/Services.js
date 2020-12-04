@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // import 'swiper/components/scrollbar/scrollbar.scss'
 
 import 'swiper/swiper-bundle.css'
+import PerLineAnimate from '../PerLineAnimate'
 
 const Services = () => {
   return (
@@ -232,7 +233,9 @@ const Services = () => {
                 </svg>
               </div>
               <div className="heading-font font-semibold pb-16">
-                <h1> Services</h1>
+                <PerLineAnimate>
+                  <h1> Services</h1>
+                </PerLineAnimate>
               </div>
               <div className="row-carousel">
                 <div className="coloumn-left-carousel">
@@ -248,7 +251,6 @@ const Services = () => {
                     <a href="http://localhost:3001/creative#uix-id">
                       <p> UI/UX Design </p>{' '}
                     </a>
-                    <p> Photo & Videography</p>
                   </div>
                 </div>
                 <div className="coloumn-right-carousel">

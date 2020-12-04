@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import ReactPlayer from 'react-player/lazy'
-import styled from 'styled-components'
 import Container from '../Container'
 import { TimelineLite, Power2, gsap } from 'gsap'
 
@@ -43,11 +41,6 @@ const HeroVideo = () => {
     const { CSSRulePlugin } = GSAP
     let imageReveal = CSSRulePlugin.getRule('.animation-wrapper:after')
 
-    // tl.from(video, 1, { css: { width: 0 } }).to(imageReveal, 1.4, {
-    //   width: '0%',
-    //   ease: Power2.easeInOut,
-    // })
-
     tl.from(imageReveal, 1.4, {
       width: '0%',
       ease: Power2.easeInOut,
@@ -59,8 +52,7 @@ const HeroVideo = () => {
         width: '0%',
         ease: Power2.easeInOut,
       })
-    // .from(vidplayer, 1.4, { scale: 1.6, ease: Power2.easeInOut, delay: -1.6 })
-  }, [])
+  })
 
   return (
     <Container>

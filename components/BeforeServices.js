@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import PerLineAnimate from './PerLineAnimate'
 
 const BeforeService = () => {
   return (
     <div className="wrapper-beforeservice">
       <div className="leading-relaxed">
-        <p>
-          " We build smart digital branding strategies through careful &
-          comprehensive research, utilizing self-developed tools to make the
-          process even more efficient. "
-        </p>
+        <PerLineAnimate>
+          <p>
+            " We build smart digital branding strategies through careful &
+            comprehensive research, utilizing self-developed tools to make the
+            process even more efficient. "
+          </p>
+        </PerLineAnimate>
       </div>
       <div className="agency-logo">
         <svg

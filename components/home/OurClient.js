@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PerLineAnimate from '../PerLineAnimate'
 
 const ImgClient = styled.img`
   filter: invert(1);
@@ -44,7 +45,9 @@ const OurClient = ({ client }) => {
       <div className="pt-32 mx-auto">
         <div className="lg:px-16 px-6">
           <div className="ml-5 mt-12">
-            <h1 className="font-bold heading-font text-center">Our Client</h1>
+            <PerLineAnimate>
+              <h1 className="font-bold heading-font text-center">Our Client</h1>
+            </PerLineAnimate>
             <p className="text-center py-12">
               List of our remarkable clients throughout the years.
             </p>
