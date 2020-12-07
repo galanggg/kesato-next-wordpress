@@ -610,16 +610,24 @@ body {
   right: -65px;
 }
 
+// .agency-logo-brand {
+//   position: absolute;
+//   width: 110px;
+//   height: 100px;
+//   bottom: -60px;
+//   right: -50px;
+//   animation-name: muter;
+//   animation-duration: 5s;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+// }
+
 .agency-logo-brand {
   position: absolute;
   width: 110px;
   height: 100px;
   bottom: -60px;
   right: -50px;
-  animation-name: muter;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 .logo-brand-left {
@@ -720,14 +728,14 @@ body {
   max-width: 50%;
 }
 
-@keyframes muter {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes muter {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
 .img-animation {
   visibility: hidden;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import AgencyLogoAnimate from './AgencyLogoAnimate'
 import PerLineAnimate from './PerLineAnimate'
 
 const BeforeService = () => {
@@ -14,7 +15,8 @@ const BeforeService = () => {
           </p>
         </PerLineAnimate>
       </div>
-      <div className="agency-logo">
+      <AgencyLogoAnimate>
+        {/* <div className="agency-logo"> */}
         <svg
           version="1.1"
           id="Layer_1"
@@ -120,7 +122,8 @@ const BeforeService = () => {
             </g>
           </g>
         </svg>
-      </div>
+        {/* </div> */}
+      </AgencyLogoAnimate>
     </div>
   )
 }
