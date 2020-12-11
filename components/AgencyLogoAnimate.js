@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-const AgencyLogoAnimate = ({ children }) => {
+const AgencyLogoAnimate = ({ children, ...props }) => {
   const rotateLogo = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
 
@@ -21,7 +21,10 @@ const AgencyLogoAnimate = ({ children }) => {
 
   return (
     <>
-      <div ref={rotateLogo} className="agency-logo ">
+      <div
+        ref={rotateLogo}
+        className={props.position == 'left' ? 'logo-brand-left' : 'agency-logo'}
+      >
         {children}
       </div>
     </>

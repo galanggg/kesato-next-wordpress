@@ -19,12 +19,12 @@ export default function Home({ homePage: { edges } }) {
   return (
     <>
       <HeroVideo videography="https://next.kesato.io/wp-content/uploads/2020/07/video.png"></HeroVideo>
-      <Hero
+      {/* <Hero
         tagline={homepage.tagline.tagline}
         heroImage={homepage.featuredImage.node.sourceUrl}
       />
       <BeforeService />
-      <Services />
+      <Services /> */}
       <Team />
       <OurClient client={homepage.client.client} />
     </>

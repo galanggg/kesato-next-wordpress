@@ -1,6 +1,8 @@
+import AgencyLogoAnimate from './AgencyLogoAnimate'
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 import ParagraphAnimation from './ParagraphAnimation'
+import PerLineAnimate from './PerLineAnimate'
 
 const UiX = () => {
   return (
@@ -24,12 +26,14 @@ const UiX = () => {
               </p>
             </ParagraphAnimation>
             <div className="see-more">
-              <a href=""> Learn More </a>
+              <PerLineAnimate>
+                <a href=""> Learn More </a>
+              </PerLineAnimate>
             </div>
           </div>
           <div className="relative w-6/12">
             <ImageAnimation source="culture1.jpg" />
-            <div className="agency-logo-brand">
+            <AgencyLogoAnimate>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="Layer_1"
@@ -48,7 +52,7 @@ const UiX = () => {
                   class="st0"
                 />
               </svg>
-            </div>
+            </AgencyLogoAnimate>
           </div>
         </div>
       </div>

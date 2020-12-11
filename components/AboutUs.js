@@ -1,3 +1,8 @@
+import AgencyLogoAnimate from './AgencyLogoAnimate'
+import ImageAnimation from './ImageAnimation'
+import ParagraphAnimation from './ParagraphAnimation'
+import PerLineAnimate from './PerLineAnimate'
+
 const AboutUs = () => {
   return (
     <section>
@@ -35,30 +40,37 @@ const AboutUs = () => {
 
         <div className="about-container-middle">
           <div className="heading-font font-semibold pb-16">
-            <h1>About Us </h1>
+            <PerLineAnimate>
+              <h1>About Us </h1>
+            </PerLineAnimate>
           </div>
           <div className="row-middle">
             <div className="w-6/12 pr-6 leading-loose">
-              <p className="pb-5">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s. When an unknown printer took a galley of type
-                and scrambled.
-              </p>
-              <p className="pb-5">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took.
-              </p>
-              <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
+              <ParagraphAnimation>
+                <p className="pb-5">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s. When an unknown printer took a galley of type
+                  and scrambled.
+                </p>
+
+                <p className="pb-5">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took.
+                </p>
+
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a gallexy of
+                  type and scrambled it to make a type specimen book.
+                </p>
+              </ParagraphAnimation>
             </div>
             <div className="relative w-6/12">
               <div className="about-pict">
-                <img src="about-team.jpg" />
+                <ImageAnimation source="about-team.jpg" />
               </div>
-              <div className="agency-logo-about">
+              <AgencyLogoAnimate>
+                {/* <div className="agency-logo-about"> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   id="Layer_1"
@@ -80,7 +92,8 @@ const AboutUs = () => {
                     <path d="M0 81.2h61.9v3.4H0z" class="st0" />
                   </g>
                 </svg>
-              </div>
+                {/* </div> */}
+              </AgencyLogoAnimate>
             </div>
           </div>
         </div>

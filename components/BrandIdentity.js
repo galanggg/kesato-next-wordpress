@@ -2,6 +2,7 @@ import AgencyLogoAnimate from './AgencyLogoAnimate'
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 import ParagraphAnimation from './ParagraphAnimation'
+
 const BrandIdentity = () => {
   return (
     <section id="brandidentity-id">

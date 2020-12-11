@@ -23,7 +23,7 @@ const PerLineAnimate = ({ children }) => {
 
   return (
     <>
-      <div ref={perLine} className="container pb-5">
+      <div ref={perLine} className="container ">
         {children}
       </div>
     </>

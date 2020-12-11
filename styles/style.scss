@@ -170,6 +170,17 @@ body {
   right: 0;
   background-color: pink;
 }
+
+.pink-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: pink;
+  z-index: 9;
+}
+
 .video img {
   width: 90%;
 }
@@ -610,18 +621,6 @@ body {
   right: -65px;
 }
 
-// .agency-logo-brand {
-//   position: absolute;
-//   width: 110px;
-//   height: 100px;
-//   bottom: -60px;
-//   right: -50px;
-//   animation-name: muter;
-//   animation-duration: 5s;
-//   animation-timing-function: linear;
-//   animation-iteration-count: infinite;
-// }
-
 .agency-logo-brand {
   position: absolute;
   width: 110px;
@@ -781,12 +780,10 @@ body {
 }
 
 .heading-section {
-  &__wrapper,
-  &__wrapper-baru {
+  &__wrapper {
     font-size: 50px;
     font-weight: bolder;
     // visibility: hidden;
-    margin-bottom: 35px;
   }
 
   &__item {

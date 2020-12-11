@@ -1,3 +1,7 @@
+import ImageAnimation from './ImageAnimation'
+import ParagraphAnimation from './ParagraphAnimation'
+import PerLineAnimate from './PerLineAnimate'
+
 const OurCulture = () => {
   return (
     <section>
@@ -67,28 +71,32 @@ const OurCulture = () => {
 
         <div className="about-container-middle">
           <div className="heading-font font-bold pb-16">
-            <h1>Our Culture </h1>
+            <PerLineAnimate>
+              <h1>Our Culture </h1>
+            </PerLineAnimate>
           </div>
           <div class="row-middle">
             <div className=" w-8/12 pr-6 leading-loose">
-              <p className="pb-5">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p className="pb-5 ">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took.
-              </p>
-              <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
+              <ParagraphAnimation>
+                <p className="pb-5">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
+                </p>
+                <p className="pb-5 ">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took.
+                </p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
+                </p>
+              </ParagraphAnimation>
             </div>
             <div className="w-4/12 ">
               <div className="w-full">
-                <img src="culture2.jpg" />
+                <ImageAnimation source="culture2.jpg" />
               </div>
             </div>
           </div>

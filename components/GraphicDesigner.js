@@ -2,6 +2,7 @@ import AgencyLogoAnimate from './AgencyLogoAnimate'
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 import ParagraphAnimation from './ParagraphAnimation'
+import PerLineAnimate from './PerLineAnimate'
 
 const GraphicDesigner = () => {
   return (
@@ -82,7 +83,7 @@ const GraphicDesigner = () => {
                       <ImageAnimation source="dkv.jpg" />
                     </div>
                   </div>
-                  <AgencyLogoAnimate>
+                  <AgencyLogoAnimate position="left">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       id="Layer_1"
@@ -119,7 +120,9 @@ const GraphicDesigner = () => {
                 </ParagraphAnimation>
 
                 <div className="see-more">
-                  <a href=""> Learn More </a>
+                  <PerLineAnimate>
+                    <a href=""> Learn More </a>
+                  </PerLineAnimate>
                 </div>
               </div>
             </div>

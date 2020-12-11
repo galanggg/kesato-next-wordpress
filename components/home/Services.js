@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import tw from 'twin.macro'
+import Link from 'next/link'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -13,6 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/swiper-bundle.css'
 import PerLineAnimate from '../PerLineAnimate'
+import ParagraphAnimation from '../ParagraphAnimation'
 
 const Services = () => {
   return (
@@ -240,17 +242,30 @@ const Services = () => {
               <div className="row-carousel">
                 <div className="coloumn-left-carousel">
                   <div className="creative-menu leading-loose">
-                    <h2 className="text-3xl font-semibold pb-5"> Creative</h2>
-                    <a href="http://localhost:3001/creative#brandidentity-id">
-                      <p> Brand Identity</p>
-                    </a>
-                    <a href="http://localhost:3001/creative#dkv-id">
-                      {' '}
-                      <p> Graphic Designer</p>
-                    </a>
-                    <a href="http://localhost:3001/creative#uix-id">
-                      <p> UI/UX Design </p>{' '}
-                    </a>
+                    <ParagraphAnimation>
+                      <h2 className="text-3xl font-semibold pb-5"> Creative</h2>
+                    </ParagraphAnimation>
+                    <PerLineAnimate>
+                      <Link href="/creative">
+                        <a>
+                          <p> Brand Identity</p>
+                        </a>
+                      </Link>
+                    </PerLineAnimate>
+                    <PerLineAnimate>
+                      <Link href="/creative#dkv-id">
+                        <a>
+                          <p> Graphic Designer</p>
+                        </a>
+                      </Link>
+                    </PerLineAnimate>
+                    <PerLineAnimate>
+                      <Link href="/creative#uix-id">
+                        <a>
+                          <p>UI/UX Design </p>
+                        </a>
+                      </Link>
+                    </PerLineAnimate>
                   </div>
                 </div>
                 <div className="coloumn-right-carousel">

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
+import { useState, useRef, useEffect } from 'react'
 import ReactPlayer from 'react-player/lazy'
-import styled from 'styled-components'
+import { Power2, gsap } from 'gsap'
+import ParagraphAnimation from '../ParagraphAnimation'
 import PerLineAnimate from '../PerLineAnimate'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const PlayIcon = () => {
   return (
@@ -31,6 +32,39 @@ const PlayIcon = () => {
 
 const Team = () => {
   const [putar, setPutar] = useState(false)
+  let animationwrapper = useRef(null)
+  let vidplayer = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: animationwrapper.current,
+        start: 'top 70%',
+        toggleActions: 'restart none none reset',
+        markers: true,
+      },
+    })
+
+    // const tl = gsap.timeline()
+
+    tl.from(animationwrapper, {
+      width: '0%',
+      duration: 1,
+      ease: Power2.easeInOut,
+    })
+      .to(vidplayer, {
+        autoAlpha: 1,
+        duration: 0.2,
+      })
+      .to(animationwrapper, {
+        width: '0%',
+        ease: Power2.easeInOut,
+        duration: 0.7,
+      })
+  })
+
   return (
     <section className="relative pt-32">
       <div className="ornaments-left">
@@ -150,43 +184,55 @@ const Team = () => {
       <div className="container-middle">
         <div className="heading-font font-semibold pb-16">
           <PerLineAnimate>
-            {' '}
             <h1>Team </h1>
           </PerLineAnimate>
         </div>
         <div class="row-middle">
           <div className="team-desc leading-loose">
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
-            </p>
+            <ParagraphAnimation>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.
+              </p>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry
+              </p>
+            </ParagraphAnimation>
             <div className="see-more">
-              <a href=""> See More Detail </a>
+              <PerLineAnimate>
+                <a href=""> See More Detail </a>
+              </PerLineAnimate>
             </div>
           </div>
           <div className="team-video">
-            <div className="team-video-box">
-              <ReactPlayer
-                url="/bykesato.mp4"
-                width="100%"
-                height="100%"
-                className="react-player"
-                playing={putar}
-                onReady={() => setPutar(true)}
-                onStart={() => console.log('onStart callback')}
-                onPause={() => console.log('onPause callback')}
-                onEnded={() => console.log('onEnded callback')}
-                onError={() => console.log('onError callback')}
-                light="/kesato_cover.png"
-                playIcon={<PlayIcon />}
-                controls
-              />
+            <div className="w-full relative">
+              <div
+                ref={(el) => (animationwrapper = el)}
+                className="pink-overlay"
+              ></div>
+              <div
+                ref={(el) => (vidplayer = el)}
+                className="invisible opacity-0 team-video-box"
+              >
+                <ReactPlayer
+                  url="/bykesato.mp4"
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  playing={putar}
+                  onReady={() => setPutar(true)}
+                  onStart={() => console.log('onStart callback')}
+                  onPause={() => console.log('onPause callback')}
+                  onEnded={() => console.log('onEnded callback')}
+                  onError={() => console.log('onError callback')}
+                  light="/kesato_cover.png"
+                  playIcon={<PlayIcon />}
+                  controls
+                />
+              </div>
             </div>
           </div>
         </div>

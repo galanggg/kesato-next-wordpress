@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import AgencyLogoAnimate from '../AgencyLogoAnimate'
 
 const JoinUs = () => {
   const [input, setInput] = useState({
@@ -219,7 +220,8 @@ const JoinUs = () => {
                   rows="10"
                 ></textarea>
               </div>
-              <div className="agency-logo-join">
+              <AgencyLogoAnimate>
+                {/* <div className="agency-logo-join"> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   id="Layer_1"
@@ -241,7 +243,8 @@ const JoinUs = () => {
                     <path d="M0 81.2h61.9v3.4H0z" class="st0" />
                   </g>
                 </svg>
-              </div>
+                {/* </div> */}
+              </AgencyLogoAnimate>
             </div>
           </div>
         </form>

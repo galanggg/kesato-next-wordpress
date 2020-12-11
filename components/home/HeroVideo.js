@@ -56,7 +56,8 @@ const HeroVideo = () => {
   })
 
   return (
-    <Container>
+    // <Container>
+    <div className="w-8/12	mx-auto">
       <div ref={(el) => (video = el)} className="video">
         <div
           ref={(el) => (animationwrapper = el)}
@@ -112,7 +113,8 @@ const HeroVideo = () => {
           </a>
         </div>
       </div>
-    </Container>
+    </div>
+    // </Container>
   )
 }
 export default HeroVideo

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ParagraphAnimation from '../ParagraphAnimation'
 import PerLineAnimate from '../PerLineAnimate'
 
 const ImgClient = styled.img`
@@ -48,9 +49,11 @@ const OurClient = ({ client }) => {
             <PerLineAnimate>
               <h1 className="font-bold heading-font text-center">Our Client</h1>
             </PerLineAnimate>
-            <p className="text-center py-12">
-              List of our remarkable clients throughout the years.
-            </p>
+            <PerLineAnimate>
+              <p className="text-center py-12">
+                List of our remarkable clients throughout the years.
+              </p>
+            </PerLineAnimate>
           </div>
           <div className="flex flex-wrap flex-row mt-5">
             {images.map((image) => (
