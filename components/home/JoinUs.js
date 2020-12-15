@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import AgencyLogoAnimate from '../AgencyLogoAnimate'
+import ParagraphAnimation from '../ParagraphAnimation'
+import PerLineAnimate from '../PerLineAnimate'
 
 const JoinUs = () => {
   const [input, setInput] = useState({
@@ -114,15 +116,20 @@ const JoinUs = () => {
 
       <div className="container-middle">
         <div className="heading-font font-bold pb-16">
-          <h1>Join Us! </h1>
+          <PerLineAnimate>
+            <h1>Join Us! </h1>
+          </PerLineAnimate>
         </div>
+
         <div className="join-desc">
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry
-          </p>
+          <ParagraphAnimation>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. Lorem Ipsum is simply
+              dummy text of the printing and typesetting industry
+            </p>
+          </ParagraphAnimation>
         </div>
         <form
           action="https://getform.io/f/86928a2e-6219-451f-800b-9d219fdbd908"
@@ -133,92 +140,114 @@ const JoinUs = () => {
             <div className="w-4/12 join-col-left">
               <div className="job-list">
                 <div className="pb-2 job-tittle">
-                  <p> I would like to be a Kesato ...</p>
+                  <ParagraphAnimation>
+                    <p> I would like to be a Kesato ...</p>
+                  </ParagraphAnimation>
                 </div>
                 <div>
                   <div className="pb-2">
-                    <input type="radio" value="Web Developer" name="jobs" />
-                    Web Developer
+                    <PerLineAnimate>
+                      <input type="radio" value="Web Developer" name="jobs" />
+                      Web Developer
+                    </PerLineAnimate>
                   </div>
                   <div className="pb-2">
-                    <input type="radio" value="Graphic Designer" name="jobs" />{' '}
-                    Graphic Designer
+                    <PerLineAnimate>
+                      <input
+                        type="radio"
+                        value="Graphic Designer"
+                        name="jobs"
+                      />{' '}
+                      Graphic Designer
+                    </PerLineAnimate>
                   </div>
                   <div className="pb-2">
-                    <input type="radio" value="SEO" name="jobs" /> SEO
+                    <PerLineAnimate>
+                      <input type="radio" value="SEO" name="jobs" /> SEO
+                    </PerLineAnimate>
                   </div>
                   <div className="pb-2">
-                    <input type="radio" value="Community Manger" name="jobs" />{' '}
-                    Community Manager
-                  </div>
-                  <div className="pb-2">
-                    <input type="radio" value="Photographer" name="jobs" />{' '}
-                    Photographer
-                  </div>
-                  <div>
-                    <input type="radio" value="Videographer" name="jobs" />{' '}
-                    Videographer
+                    <PerLineAnimate>
+                      <input
+                        type="radio"
+                        value="Community Manger"
+                        name="jobs"
+                      />{' '}
+                      Community Manager
+                    </PerLineAnimate>
                   </div>
                 </div>
                 <div>
                   <div className="pt-10 pb-5 styling-files">
-                    <input
-                      type="file"
-                      className="cv-uploader"
-                      id="file"
-                      name="userfile"
-                    />
-                    <label for="file"> Upload your CV</label>
+                    <PerLineAnimate>
+                      <input
+                        type="file"
+                        className="cv-uploader"
+                        id="file"
+                        name="userfile"
+                      />
+                      <label for="file"> Upload your CV</label>
+                    </PerLineAnimate>
                   </div>
                 </div>
                 <div>
-                  <button
-                    className="border-solid border border-black bg-transparent py-3 px-8"
-                    // onClick={submitAll}
-                    name="submit"
-                    type="submit"
-                  >
-                    Apply
-                  </button>
+                  <PerLineAnimate>
+                    <button
+                      className="border-solid border border-black bg-transparent py-3 px-8"
+                      // onClick={submitAll}
+                      name="submit"
+                      type="submit"
+                    >
+                      Apply
+                    </button>
+                  </PerLineAnimate>
                 </div>
               </div>
             </div>
             <div className="relative w-8/12 join-col-right">
               <div className="pb-5">
-                <input
-                  className="h-12 w-full border-solid border border-black bg-transparent"
-                  type="text"
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  name="yourname"
-                />
+                <PerLineAnimate>
+                  <input
+                    className="h-12 w-full border-solid border border-black bg-transparent"
+                    type="text"
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    name="yourname"
+                  />
+                </PerLineAnimate>
               </div>
               <div className="pb-5">
-                <input
-                  className="h-12 w-full border-solid border border-black bg-transparent"
-                  type="text"
-                  onChange={handleChange}
-                  placeholder="Email"
-                  name="email"
-                />
+                <PerLineAnimate>
+                  <input
+                    className="h-12 w-full border-solid border border-black bg-transparent"
+                    type="text"
+                    onChange={handleChange}
+                    placeholder="Email"
+                    name="email"
+                  />
+                </PerLineAnimate>
               </div>
               <div className="pb-5">
-                <input
-                  className="h-12 w-full border-solid border border-black bg-transparent"
-                  type="text"
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                  name="phone"
-                />
+                <PerLineAnimate>
+                  <input
+                    className="h-12 w-full border-solid border border-black bg-transparent"
+                    type="text"
+                    onChange={handleChange}
+                    placeholder="Phone Number"
+                    name="phone"
+                  />
+                </PerLineAnimate>
               </div>
               <div>
-                <textarea
-                  className="w-full border-solid border border-black bg-transparent pt-3"
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  name="message"
-                  rows="10"
-                ></textarea>
+                <PerLineAnimate>
+                  <textarea
+                    className="w-full border-solid border border-black bg-transparent pt-3"
+                    onChange={handleChange}
+                    placeholder="Your Message"
+                    name="message"
+                    rows="10"
+                  ></textarea>
+                </PerLineAnimate>
               </div>
               <AgencyLogoAnimate>
                 {/* <div className="agency-logo-join"> */}

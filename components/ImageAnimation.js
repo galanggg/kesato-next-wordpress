@@ -29,7 +29,7 @@ const ImageAnimation = (props) => {
         },
         {
           autoAlpha: 1,
-          scale: 1,
+           scale: 1,
           duration: 2,
         },
       )

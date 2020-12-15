@@ -46,7 +46,6 @@ const Team = () => {
         markers: true,
       },
     })
-
     // const tl = gsap.timeline()
 
     tl.from(animationwrapper, {
@@ -212,26 +211,27 @@ const Team = () => {
               <div
                 ref={(el) => (animationwrapper = el)}
                 className="pink-overlay"
-              ></div>
-              <div
-                ref={(el) => (vidplayer = el)}
-                className="invisible opacity-0 team-video-box"
               >
-                <ReactPlayer
-                  url="/bykesato.mp4"
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  playing={putar}
-                  onReady={() => setPutar(true)}
-                  onStart={() => console.log('onStart callback')}
-                  onPause={() => console.log('onPause callback')}
-                  onEnded={() => console.log('onEnded callback')}
-                  onError={() => console.log('onError callback')}
-                  light="/kesato_cover.png"
-                  playIcon={<PlayIcon />}
-                  controls
-                />
+                <div
+                  ref={(el) => (vidplayer = el)}
+                  className="invisible opacity-0 team-video-box"
+                >
+                  <ReactPlayer
+                    url="/bykesato.mp4"
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    playing={putar}
+                    onReady={() => setPutar(true)}
+                    onStart={() => console.log('onStart callback')}
+                    onPause={() => console.log('onPause callback')}
+                    onEnded={() => console.log('onEnded callback')}
+                    onError={() => console.log('onError callback')}
+                    light="/kesato_cover.png"
+                    playIcon={<PlayIcon />}
+                    controls
+                  />
+                </div>
               </div>
             </div>
           </div>
