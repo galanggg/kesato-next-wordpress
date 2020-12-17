@@ -161,6 +161,7 @@ body {
   visibility: hidden;
   // opacity: 0;
 }
+
 .animation-wrapper:after {
   content: '';
   position: absolute;
@@ -168,7 +169,7 @@ body {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: pink;
+  background-color: #f6c2ad;
 }
 
 .pink-overlay {
@@ -177,7 +178,7 @@ body {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: pink;
+  background-color: #f6c2ad;
   z-index: 9;
 }
 
@@ -191,7 +192,7 @@ body {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: pink;
+  background-color: #f6c2ad;
 }
 
 .player-btn {
@@ -753,7 +754,7 @@ body {
       height: 100%;
       position: absolute;
       content: '';
-      background: pink;
+      background: #f6c2ad;
       top: 0;
       right: 0;
     }
@@ -832,4 +833,24 @@ body {
       line-height: normal;
     }
   }
+}
+
+.menu-overlay {
+  opacity: 0.5;
+}
+
+.menu-ornaments {
+}
+
+@media (max-width: 767px) {
+  u.navbar-right {
+    display: none;
+  }
+}
+
+.side-menu {
+  background: #f6c2ad;
+  width: 100%;
+  max-width: 500px;
+  @apply fixed right-0 top-0 bottom-0 z-50;
 }

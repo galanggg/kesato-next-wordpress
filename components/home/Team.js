@@ -43,7 +43,6 @@ const Team = () => {
         trigger: animationwrapper.current,
         start: 'top 70%',
         toggleActions: 'restart none none reset',
-        markers: true,
       },
     })
     // const tl = gsap.timeline()
