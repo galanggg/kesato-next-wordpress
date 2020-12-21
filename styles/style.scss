@@ -685,7 +685,29 @@ body {
     grid-column: 2;
   }
 }
+.back a:before {
+  background: #ffff;
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 1px;
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+}
 
+.back a:after {
+  // background: #85c6a4;
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+  right: -60px;
+}
 .service-card .overlay {
   position: absolute;
   overflow: hidden;
@@ -761,8 +783,15 @@ body {
   }
 }
 
+.menu-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .heading-animation {
   // visibility: hidden;
+}
+.footer-sidebar {
+  padding-top: 200px;
 }
 
 .heading-animation h1 {
@@ -835,13 +864,6 @@ body {
   }
 }
 
-.menu-overlay {
-  opacity: 0.5;
-}
-
-.menu-ornaments {
-}
-
 @media (max-width: 767px) {
   u.navbar-right {
     display: none;
@@ -850,6 +872,10 @@ body {
 
 .side-menu {
   background: #f6c2ad;
+  background-image: url(/4.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 45%;
   width: 100%;
   max-width: 500px;
   @apply fixed right-0 top-0 bottom-0 z-50;

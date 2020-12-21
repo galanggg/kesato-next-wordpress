@@ -9,9 +9,7 @@ const OurClient = dynamic(() => import('../components/home/OurClient'))
 const Footer = dynamic(() => import('../components/home/Footer'))
 
 import { getAllPages } from '../lib/api'
-import Container from '../components/Container'
 import HeroVideo from '../components/home/HeroVideo'
-import BeforeService from '../components/BeforeServices'
 
 export default function Home({ homePage: { edges } }) {
   const homepage = edges[0]?.node

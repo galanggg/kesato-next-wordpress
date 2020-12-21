@@ -77,8 +77,8 @@ const Nav = () => {
         </div>
       </header>
       <div className="menu-overlay fixed w-full h-screen z-40 bg-primary opacity-20 top-0 left-0"></div>
-      <div className="side-menu ">
-        <div class="menu-ornaments ">
+      <div className="side-menu pl-20 pt-32">
+        <div class="menu-ornaments w-full absolute top-0 left-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Layer_1"
@@ -86,7 +86,7 @@ const Nav = () => {
             y="0"
             version="1.1"
             viewBox="0 0 309.3 334.8"
-            fill="#ffff"
+            fill="#4B75A9"
           >
             <defs />
             <path
@@ -123,18 +123,39 @@ const Nav = () => {
         </div>
         <div className="heading-font font-semibold ">
           <ul>
-            <li className="relative pb-24 ">
+            <li className=" pb-16 text-white">
               <a href="http://localhost:3001/#service-id">Services</a>
             </li>
-            <li className="relative pb-24">
+            <li className=" pb-16 text-white">
               <a href="http://localhost:3001/#hero-id">Case Study</a>
             </li>
-            <li className="relative">
+            <li className="text-white">
               <a href="#">Le Studio</a>
             </li>
           </ul>
         </div>
-        <div className="ornament-bottom">
+
+        <div className="back pt-32 text-lg text-white">
+          <a className="relative inline-block pr-3"> Back</a>
+        </div>
+        <div className="footer-sidebar ">
+          <div className="email text-base pb-2 text-white">
+            <p> hello@kesato.com </p>
+          </div>
+          <div className="sosmed-icon flex ">
+            <a href="#" className="mr-6">
+              <img src="instagram-2.svg" className="w-5" />
+            </a>
+            <a href="#" className="mr-6">
+              <img src="youtube-2.svg" className="w-6" />
+            </a>
+            <a href="#" className="mr-6">
+              <img src="facebook-2.svg" className="w-6" />
+            </a>
+          </div>
+        </div>
+        {/* <div className="ornament-bottom w-full absolute">
+          <img src="/4.svg" />
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.3 327.4">
             <defs />
             <g fill="none" stroke-miterlimit="10">
@@ -145,7 +166,7 @@ const Nav = () => {
               />
             </g>
           </svg>
-        </div>
+        </div> */}
       </div>
     </>
   )
