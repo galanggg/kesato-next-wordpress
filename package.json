@@ -17,7 +17,7 @@
     "@zeit/next-sass": "^1.0.1",
     "aos": "^3.0.0-beta.6",
     "apollo-link": "^1.2.14",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "cross-env": "^7.0.2",
     "framer-motion": "^2.9.4",
