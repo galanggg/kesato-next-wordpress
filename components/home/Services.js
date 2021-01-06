@@ -381,6 +381,16 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <div className="wraper-services-mb px-8">
+        <div className="heading-font font-semibold pb-16 pt-16">
+          <PerLineAnimate>
+            <h1> Services</h1>
+          </PerLineAnimate>
+        </div>
+        <div className="">
+          
+        </div>
+      </div>
     </section>
   )
 }

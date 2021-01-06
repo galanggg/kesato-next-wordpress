@@ -123,31 +123,6 @@ body {
   height: calc(100vh - 58px);
 }
 
-.navbar-right {
-  font-size: 14px;
-  height: 50px;
-  color: black;
-
-  a {
-    display: block;
-    padding: {
-      left: 20px;
-      right: 20px;
-    }
-  }
-
-  li:not(:last-child):before {
-    content: '';
-    height: 30px;
-    width: 1px;
-    background: #333;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-}
-
 .video {
   text-align: center;
   justify-content: center;
@@ -159,6 +134,7 @@ body {
 
 .vidplayer {
   visibility: hidden;
+  padding-top: 36.23%;
   // opacity: 0;
 }
 
@@ -240,11 +216,21 @@ body {
 }
 
 .wrapper-beforeservice {
-  max-width: 700px;
+  max-width: 730px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
   position: relative;
   font-size: 24px;
+  @media (max-width: 767px) {
+    p {
+      font-size: 16px;
+    }
+    padding-top: 80px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 .agency-logo {
@@ -259,6 +245,9 @@ body {
   padding-top: 150px;
   position: relative;
   margin-top: 50px;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .row-services {
@@ -416,6 +405,9 @@ body {
   bottom: -220px;
 }
 
+.back a {
+  cursor: pointer;
+}
 .ornaments-right {
   position: absolute;
   width: 80px;
@@ -456,6 +448,9 @@ body {
 
 .heading-font {
   font-size: 58px;
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
 }
 
 .see-more {
@@ -608,6 +603,10 @@ body {
   top: 100px;
 }
 
+.nav-mb {
+  display: none;
+}
+
 .join-ornaments-right {
   position: absolute;
   width: 110px;
@@ -668,6 +667,10 @@ body {
   @at-root .grid-no2 & {
     height: 605px;
     width: 100%;
+    @media (max-width: 767px) {
+      height: 300px;
+      width: 100%;
+    }
   }
 }
 .grid-container {
@@ -675,7 +678,11 @@ body {
   grid-template-columns: auto auto auto;
   margin-left: -3px;
   margin-right: -3px;
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
+
 .grid-item {
   font-size: 30px;
   text-align: center;
@@ -737,6 +744,9 @@ body {
   font-size: 14px;
   line-height: 30px;
   text-align: left;
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
 }
 
 .overlay p {
@@ -744,6 +754,9 @@ body {
   font-family: kesato-light;
   line-height: 30px;
   text-align: left;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .overlay-desc {
@@ -863,20 +876,105 @@ body {
     }
   }
 }
-
-@media (max-width: 767px) {
-  u.navbar-right {
-    display: none;
-  }
-}
-
 .side-menu {
   background: #f6c2ad;
   background-image: url(/4.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
+  transform: translateX(100%);
   background-size: auto 45%;
   width: 100%;
   max-width: 500px;
   @apply fixed right-0 top-0 bottom-0 z-50;
+}
+
+@media (max-width: 767px) {
+  .vidplayer {
+    visibility: hidden;
+    padding-top: 50%;
+    // opacity: 0;
+  }
+  .video {
+    padding-top: 40px;
+  }
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+  .navbar-right {
+    font-size: 14px;
+    height: 30px;
+    color: black;
+
+    a {
+      display: block;
+      padding: {
+        left: 8px;
+        right: 8px;
+      }
+    }
+
+    li:not(:last-child):before {
+      content: '';
+      height: 30px;
+      width: 1px;
+      background: #333;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+  .mb-hero-carousel {
+    .swiper-pagination-bullet {
+      background-color: #fff;
+      opacity: 1;
+      border: 1px white solid;
+      width: 10px;
+      height: 10px;
+      &.swiper-pagination-bullet-active {
+        background-color: #4b75a9;
+      }
+    }
+  }
+  .hero-wrapper {
+    display: none;
+  }
+  .mb-none-agencylogo {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+  .swiper-hero-mb {
+    display: none;
+  }
+  .navbar-right {
+    font-size: 14px;
+    height: 50px;
+    color: black;
+
+    a {
+      display: block;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+
+    li:not(:last-child):before {
+      content: '';
+      height: 30px;
+      width: 1px;
+      background: #333;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
 }

@@ -1,23 +1,64 @@
-import React from 'react'
+import { useRef } from 'react'
 // import KESATO from '../../public/kesato-header-logo.svg'
 import Link from 'next/link'
 import { useRouter, Router } from 'next/router'
 import Container from '../Container'
+import { gsap, Power2 } from 'gsap'
 
 const Nav = () => {
   const router = useRouter()
+  const overlay = useRef()
+  const sidemenu = useRef()
+  const closeSideMenu = (e) => {
+    const timeline = gsap.timeline()
+    // var menu = new TimelineMax({paused:true});
+    // menu.to(".more", 3, {height:'inherit',ease:Power2.easeInOut})
+    // .staggerTo(".menu ", 0.2, {autoAlpha:1}, 0.2,0.3)
+
+    // $('.more').mouseenter(function(){
+    //   menu.play().timeScale(1);
+    //   });
+
+    // $('.more').mouseleave(function(){
+    //   menu.reverse().timeScale(3);
+    // });
+    timeline
+      .to(overlay.current, {
+        autoAlpha: 0,
+        ease: Power2.easeInOut,
+      })
+      .to(sidemenu.current, {
+        x: 500,
+        ease: Power2.easeInOut,
+      })
+    console.log('clicked')
+  }
+
+  const openSideMenu = (e) => {
+    const timeline = gsap.timeline()
+
+    timeline
+      .to(overlay.current, {
+        autoAlpha: 100,
+        ease: Power2.easeOut,
+      })
+      .to(sidemenu.current, {
+        x: 0,
+        ease: Power2.easeOut,
+        delay: -0.2,
+      })
+  }
   return (
     <>
       <header className="sticky top-0 bg-transparant z-40 p-8">
         <div className="container-xl">
-          <div className="lg:px-16 px-6 flex flex-wrap items-center lg:py-0 py-2">
-            <div className="flex-1 flex justify-between items-center text-xl font-bold">
+          <div className="lg:px-16 flex flex-wrap justify-between items-center lg:py-0 py-2">
+            <div className="flex-1 flex  items-center text-xl font-bold">
               <Link href="/">
-                <a>
+                <a className="logo block">
                   <img
-                    src="/kesato-header-logo.svg"
+                    src="kesato-header-logo.png"
                     id="kesato-logo"
-                    className="w-5/12"
                     alt="kesato-image"
                   />
                 </a>
@@ -41,23 +82,11 @@ const Nav = () => {
           </label> */}
             {/* <input className="hidden" type="checkbox" id="menu-toggle" /> */}
 
-            <div
-              className="hidden lg:flex lg:items-center lg:w-auto w-full"
-              id="menu"
-            >
+            <div className=" flex items-center w-auto" id="menu">
               <nav className="border-solid border border-black">
-                <ul className="navbar-right lg:flex items-center justify-between text-base text-black-700 ">
-                  <li className="relative">
-                    <a href="http://localhost:3001/#service-id">Services</a>
-                  </li>
-                  <li className="relative">
-                    <a href="http://localhost:3001/#hero-id">Case Study</a>
-                  </li>
-                  <li className="relative">
-                    <a href="#">Le Studio</a>
-                  </li>
+                <ul className="navbar-right flex items-center justify-between text-base text-black-700 ">
                   <li>
-                    <a href="#">
+                    <a onClick={openSideMenu} href="#">
                       <svg
                         viewBox="0 0 100 80"
                         width="20"
@@ -76,9 +105,12 @@ const Nav = () => {
           </div>
         </div>
       </header>
-      <div className="menu-overlay fixed w-full h-screen z-40 bg-primary opacity-20 top-0 left-0"></div>
-      <div className="side-menu pl-20 pt-32">
-        <div class="menu-ornaments w-full absolute top-0 left-0">
+      <div
+        ref={overlay}
+        className="menu-overlay fixed w-full h-screen z-40 bg-primary opacity-20 top-0 left-0 invisible"
+      ></div>
+      <div ref={sidemenu} className="side-menu pl-20 pt-32 ">
+        <div class="menu-ornaments w-full	absolute top-0 left-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Layer_1"
@@ -136,7 +168,10 @@ const Nav = () => {
         </div>
 
         <div className="back pt-32 text-lg text-white">
-          <a className="relative inline-block pr-3"> Back</a>
+          <a className="relative inline-block pr-3" onClick={closeSideMenu}>
+            {' '}
+            Back
+          </a>
         </div>
         <div className="footer-sidebar ">
           <div className="email text-base pb-2 text-white">

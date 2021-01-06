@@ -57,16 +57,17 @@ const HeroVideo = () => {
 
   return (
     // <Container>
-    <div className="w-8/12	mx-auto">
+    <div className="mb-video lg:w-8/12 w-full px-8 lg:px-0	mx-auto">
       <div ref={(el) => (video = el)} className="video">
         <div
           ref={(el) => (animationwrapper = el)}
           className="animation-wrapper w-full relative"
         >
-          <div ref={(el) => (vidplayer = el)} className="vidplayer">
+          <div ref={(el) => (vidplayer = el)} className="vidplayer relative ">
             <ReactPlayer
+              className="reactPlayer absolute top-0 left-0"
               width="100%"
-              height="380px"
+              height="100%"
               url="/showreel.mp4"
               playing={putar}
               onReady={() => setPutar(true)}
@@ -83,15 +84,15 @@ const HeroVideo = () => {
       </div>
       <div className="kesato-jobs">
         <div className="container">
-          <div className="row row-jobs">
-            <div className="kesato-jobs font-semibold	">
+          <div className="row row-jobs ">
+            <div className="kesato-jobs font-semibold	text-center	">
               <JobsHeroAnimate source="Web love/ We do" />
             </div>
-            <div className="jobs">
-              <JobsHeroAnimate source="Web Development" />
+            <div className="jobs text-center	">
+              <JobsHeroAnimate source="Web Development " />
               <JobsHeroAnimate source="Graphic Design" />
             </div>
-            <div className="jobs">
+            <div className="jobs text-center	">
               <JobsHeroAnimate source="Social Media" />
               <JobsHeroAnimate source="Digital Marketing" />
             </div>

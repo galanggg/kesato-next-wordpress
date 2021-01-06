@@ -10,6 +10,7 @@ const Footer = dynamic(() => import('../components/home/Footer'))
 
 import { getAllPages } from '../lib/api'
 import HeroVideo from '../components/home/HeroVideo'
+import BeforeServives from '../components/BeforeServices'
 
 export default function Home({ homePage: { edges } }) {
   const homepage = edges[0]?.node
@@ -23,6 +24,9 @@ export default function Home({ homePage: { edges } }) {
       />
       <BeforeService />
       <Services /> */}
+      <Hero />
+      <BeforeServives />
+      <Services />
       <Team />
       <OurClient client={homepage.client.client} />
     </>
