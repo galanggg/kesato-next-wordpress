@@ -32,39 +32,39 @@ const PlayIcon = () => {
 
 const Team = () => {
   const [putar, setPutar] = useState(false)
-  let animationwrapper = useRef(null)
-  let vidplayer = useRef(null)
+  // let animationwrapper = useRef(null)
+  // let vidplayer = useRef(null)
 
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: animationwrapper.current,
-        start: 'top 70%',
-        toggleActions: 'restart none none reset',
-      },
-    })
-    // const tl = gsap.timeline()
+  // useEffect(() => {
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: animationwrapper.current,
+  //       start: 'top 70%',
+  //       toggleActions: 'restart none none reset',
+  //     },
+  //   })
+  //   // const tl = gsap.timeline()
 
-    tl.from(animationwrapper, {
-      width: '0%',
-      duration: 1,
-      ease: Power2.easeInOut,
-    })
-      .to(vidplayer, {
-        autoAlpha: 1,
-        duration: 0.2,
-      })
-      .to(animationwrapper, {
-        width: '0%',
-        ease: Power2.easeInOut,
-        duration: 0.7,
-      })
-  })
+  //   tl.from(animationwrapper, {
+  //     width: '0%',
+  //     duration: 1,
+  //     ease: Power2.easeInOut,
+  //   })
+  //     .to(vidplayer, {
+  //       autoAlpha: 1,
+  //       duration: 0.2,
+  //     })
+  //     .to(animationwrapper, {
+  //       width: '0%',
+  //       ease: Power2.easeInOut,
+  //       duration: 0.7,
+  //     })
+  // })
 
   return (
-    <section className="relative pt-32">
+    <section className="relative lg:pt-32 pt-16 px-8">
       <div className="ornaments-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -180,41 +180,24 @@ const Team = () => {
       </div>
 
       <div className="container-middle">
-        <div className="heading-font font-semibold pb-16">
+        <div className="heading-font font-semibold lg:pb-16 pb-8">
           <PerLineAnimate>
             <h1>Team </h1>
           </PerLineAnimate>
         </div>
         <div class="row-middle">
-          <div className="team-desc leading-loose">
-            <ParagraphAnimation>
-              <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry
-              </p>
-            </ParagraphAnimation>
-            <div className="see-more">
-              <PerLineAnimate>
-                <a href=""> See More Detail </a>
-              </PerLineAnimate>
-            </div>
-          </div>
-          <div className="team-video">
+          <div className="team-video order-1 md:order-2">
             <div className="w-full relative">
-              <div
+              <div className="relative">
+                <div className="team-video-box ">
+                  {/* <div
                 ref={(el) => (animationwrapper = el)}
                 className="pink-overlay"
               >
                 <div
                   ref={(el) => (vidplayer = el)}
                   className="invisible opacity-0 team-video-box"
-                >
+                > */}
                   <ReactPlayer
                     url="/bykesato.mp4"
                     width="100%"
@@ -232,6 +215,20 @@ const Team = () => {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="team-desc order-2 md:order-1 lg:leading-loose md:leading-relaxed ">
+            <ParagraphAnimation>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.
+              </p>
+            </ParagraphAnimation>
+            <div className="see-more">
+              <PerLineAnimate>
+                <a href=""> See More Detail </a>
+              </PerLineAnimate>
             </div>
           </div>
         </div>

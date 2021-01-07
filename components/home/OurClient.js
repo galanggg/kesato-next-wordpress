@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import ParagraphAnimation from '../ParagraphAnimation'
 import PerLineAnimate from '../PerLineAnimate'
 
 const ImgClient = styled.img`
