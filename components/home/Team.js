@@ -217,7 +217,7 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="team-desc order-2 md:order-1 lg:leading-loose md:leading-relaxed ">
+          <div className="team-desc order-2 md:order-1 lg:leading-loose  ">
             <ParagraphAnimation>
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever

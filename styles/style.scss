@@ -437,6 +437,7 @@ body {
   @media (max-width: 767px) {
     &.team-desc p {
       padding-top: 2rem;
+      line-height: 1.625rem;
     }
     width: 100%;
     padding-right: 0;
@@ -492,6 +493,9 @@ body {
   padding-bottom: 5px;
   flex-wrap: nowrap;
   position: relative;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 
   .col-footer {
     width: 10%;
@@ -499,15 +503,20 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
 
-    &:not(:last-child)::before {
-      content: '';
-      position: absolute;
-      width: 1px;
-      top: 5px;
-      bottom: 5px;
-      right: 0;
-      background: #333;
+    @media (min-width: 992px) {
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 5px;
+        bottom: 5px;
+        right: 0;
+        background: #333;
+      }
     }
 
     &.col-info {
@@ -520,8 +529,16 @@ body {
         font-weight: 900;
       }
     }
+
+    @media (max-width: 767px) {
+      width: 50%;
+      flex: 0 0 50% !important;
+    }
     &.col-social-icon {
       max-width: 70px;
+      @media (max-width: 767px) {
+        max-width: 50px;
+      }
     }
     svg {
       width: 30px;
@@ -536,6 +553,9 @@ body {
   font-family: see-more;
   font-weight: 600;
   color: gray;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 
   li {
     font-size: 12px;

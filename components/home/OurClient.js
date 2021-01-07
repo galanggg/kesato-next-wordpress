@@ -42,8 +42,8 @@ const OurClient = ({ client }) => {
   console.log(images)
   return (
     <section>
-      <div className="pt-32 mx-auto">
-        <div className="lg:px-16 px-6">
+      <div className="lg:pt-32 pt-16 mx-auto">
+        <div className="lg:px-16 spx-6">
           <div className="ml-5 mt-12">
             <PerLineAnimate>
               <h1 className="font-bold heading-font text-center">Our Client</h1>
@@ -56,7 +56,7 @@ const OurClient = ({ client }) => {
           </div>
           <div className="flex flex-wrap flex-row mt-5">
             {images.map((image) => (
-              <div className="w-1/6 py-10 flex items-center justify-center">
+              <div className="w-6/12 md:w-3/12 lg:w-1/6 py-10 flex items-center justify-center">
                 <ImgClient
                   src={image.sourceUrl}
                   className="transition duration-150 ease-in-outhover: transform hover:-translate-y-1 hover:scale-110"
