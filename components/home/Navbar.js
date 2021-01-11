@@ -155,10 +155,10 @@ const Nav = () => {
         </div>
         <div className="heading-font font-semibold ">
           <ul>
-            <li className=" pb-16 text-white">
+            <li className=" lg:pb-16 pb-8 text-white">
               <a href="http://localhost:3001/#service-id">Services</a>
             </li>
-            <li className=" pb-16 text-white">
+            <li className=" lg:pb-16 pb-8 text-white">
               <a href="http://localhost:3001/#hero-id">Case Study</a>
             </li>
             <li className="text-white">

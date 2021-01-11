@@ -5,7 +5,7 @@ import PerLineAnimate from './PerLineAnimate'
 
 const BeforeService = () => {
   return (
-    <div className="wrapper-beforeservice">
+    <div className="wrapper-beforeservice ">
       <div className="leading-relaxed">
         <PerLineAnimate>
           <p>
@@ -15,9 +15,8 @@ const BeforeService = () => {
           </p>
         </PerLineAnimate>
       </div>
-      <div className="mb-none-agencylogo">
+      <div className="svg-mb">
         <AgencyLogoAnimate>
-          {/* <div className="agency-logo"> */}
           <svg
             version="1.1"
             id="Layer_1"
@@ -123,7 +122,6 @@ const BeforeService = () => {
               </g>
             </g>
           </svg>
-          {/* </div> */}
         </AgencyLogoAnimate>
       </div>
     </div>

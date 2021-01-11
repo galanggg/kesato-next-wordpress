@@ -44,12 +44,12 @@ const OurClient = ({ client }) => {
     <section>
       <div className="lg:pt-32 pt-16 mx-auto">
         <div className="lg:px-16 spx-6">
-          <div className="ml-5 mt-12">
+          <div className="lg:ml-5 lg:mt-12">
             <PerLineAnimate>
               <h1 className="font-bold heading-font text-center">Our Client</h1>
             </PerLineAnimate>
             <PerLineAnimate>
-              <p className="text-center py-12">
+              <p className="text-center lg:px-0 px-8 py-12">
                 List of our remarkable clients throughout the years.
               </p>
             </PerLineAnimate>

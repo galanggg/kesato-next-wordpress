@@ -5,7 +5,7 @@ import { collectFields } from 'graphql/execution/execute'
 
 const Footer = () => {
   return (
-    <section className="lg:pt-32 pb-20 px-4">
+    <section className="lg:pt-32 lg:pb-20 py-8 px-4">
       <div className="container-footer">
         <div className="border-solid border border-black wrapper-footer border-r-0 border-l-0 md:border-r-1 md:border-l-1">
           <div className="col-footer col-info">
@@ -86,8 +86,8 @@ const Footer = () => {
           <div className="ty-footer"></div> */}
         </div>
       </div>
-      <div className="footer-2">
-        <ul className="lg:flex items-center justify-center lg:divide-x lg:divide-gray-600 leading-none">
+      <div className="">
+        <ul className="lg:flex items-center justify-center lg:divide-x lg:divide-gray-600 leading-none pt-4 pb-8 lg:text-base text-xs text-center">
           <li className="px-3">
             <a href=""> © 2018 Kesato. All Rights Reserved</a>
           </li>

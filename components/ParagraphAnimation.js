@@ -23,7 +23,7 @@ const ParagraphAnimation = ({ children }) => {
 
   return (
     <>
-      <div ref={pAnimation} className="container pb-5">
+      <div ref={pAnimation} className="container lg:pb-5">
         {children}
       </div>
     </>
