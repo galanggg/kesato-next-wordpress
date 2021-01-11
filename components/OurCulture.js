@@ -6,8 +6,8 @@ const OurCulture = () => {
   return (
     <section>
       <div className="relative lg:pt-48 pt-16 lg:px-0 px-8">
-        <div class="culture-dots-right">
-          <div className="svg-mb">
+        <div className="svg-mb">
+          <div class="culture-dots-right">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="Layer_1"

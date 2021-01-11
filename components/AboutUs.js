@@ -26,8 +26,8 @@ const AboutUs = () => {
         </nav>
       </div>
       <div className="relative lg:pt-32 pt-8 lg:px-0 px-8 ">
-        <div className="about-ornaments-left ">
-          <div className="svg-mb">
+        <div className="svg-mb">
+          <div className="about-ornaments-left ">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.2 567.7">
               <g fill="none" stroke-miterlimit="10">
                 <path stroke="#474f4f" d="M0 567.7l190.2-190.1L0 187" />
