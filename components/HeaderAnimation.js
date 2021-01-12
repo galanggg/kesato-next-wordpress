@@ -29,6 +29,7 @@ const HeaderAnimation = (props) => {
         },
         '-=0.3',
       )
+    console.log('apa')
   })
 
   return (

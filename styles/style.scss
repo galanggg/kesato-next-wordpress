@@ -470,6 +470,27 @@ body {
   }
 }
 
+.heading-section {
+  &__wrapper,
+  &__wrapper-baru {
+    font-size: 50px;
+    font-weight: bolder;
+    // visibility: hidden;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      line-height: normal;
+    }
+  }
+}
 .see-more {
   padding-top: 50px;
   font-family: see-more;
@@ -502,12 +523,13 @@ body {
     padding: 10px 20px;
     position: relative;
     display: flex;
-    align-items: center;
     @media (max-width: 767px) {
       flex-wrap: wrap;
+      padding-top: 15px;
     }
 
     @media (min-width: 992px) {
+      align-items: center;
       &:not(:last-child)::before {
         content: '';
         position: absolute;

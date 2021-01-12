@@ -270,7 +270,7 @@ const JoinUs = () => {
                 <div>
                   <PerLineAnimate>
                     <button
-                      className="border-solid border border-black bg-transparent py-3 px-8"
+                      className=" border-solid border border-black bg-transparent lg:py-3 lg:px-8 "
                       // onClick={submitAll}
                       name="submit"
                       type="submit"
