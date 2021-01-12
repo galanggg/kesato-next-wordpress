@@ -49,7 +49,7 @@ const BrandIdentity = () => {
         </div>
 
         <div className="about-container-middle">
-          <div className="heading-font leading-none	 font-semibold lg:pb-16 pb-8">
+          <div className="heading-font leading-none	 font-semibold lg:pb-4 pb-0">
             <HeaderAnimation source="Brand Identity" />
           </div>
           <div className="row-middle">

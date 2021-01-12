@@ -393,6 +393,7 @@ const Services = () => {
             slidesPerView={1}
             className="mb-swiper-service"
             pagination={{ clickable: true }}
+            loop={true}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
           >

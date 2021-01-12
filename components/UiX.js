@@ -8,7 +8,7 @@ const UiX = () => {
   return (
     <section className="uix-id  lg:pt-40 pt-16 lg:px-0 px-8">
       <div className="about-container-middle">
-        <div className="heading-font leading-none font-semibold lg:pb-16 pb-8 heading-animation">
+        <div className="heading-font leading-none font-semibold lg:pb-4 pb-0 heading-animation">
           <HeaderAnimation source="UI/X Design" />
         </div>
         <div className="row-middle">
