@@ -156,10 +156,14 @@ const Nav = () => {
         <div className="heading-font font-semibold ">
           <ul>
             <li className=" lg:pb-16 pb-8 text-white">
-              <a href="http://localhost:3001/#service-id">Services</a>
+              <a href="https://kesato-next-wordpress.vercel.app/creative">
+                Services
+              </a>
             </li>
             <li className=" lg:pb-16 pb-8 text-white">
-              <a href="http://localhost:3001/#hero-id">Case Study</a>
+              <a href="https://kesato-next-wordpress.vercel.app/about">
+                Case Study
+              </a>
             </li>
             <li className="text-white">
               <a href="#">Le Studio</a>
