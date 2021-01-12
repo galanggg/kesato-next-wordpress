@@ -19,7 +19,7 @@ const ParagraphAnimation = ({ children }) => {
       opacity: 0,
       ease: Power3.easeOut,
     })
-  })
+  }, [])
 
   return (
     <>

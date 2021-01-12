@@ -15,11 +15,6 @@ const JoinUs = () => {
   const handleChange = (e) =>
     setInput({ ...input, [e.target.name]: e.target.value })
 
-  // const submitAll = () => {
-  //   console.log(input)
-  //   alert(input)
-  // }
-
   return (
     <section className="relative lg:pt-40 pt-8 lg:px-0 px-8">
       <div className="svg-mb">
@@ -224,7 +219,7 @@ const JoinUs = () => {
                 <div>
                   <div className="pb-2">
                     <PerLineAnimate>
-                      <input type="radio" value="Web Developer" name="jobs" />
+                      <input type="radio" value="Web Developer" name="jobs" />{' '}
                       Web Developer
                     </PerLineAnimate>
                   </div>
@@ -270,7 +265,7 @@ const JoinUs = () => {
                 <div>
                   <PerLineAnimate>
                     <button
-                      className=" border-solid border border-black bg-transparent lg:py-3 lg:px-8 "
+                      className="apply-btn-mb border-solid border border-black bg-transparent lg:py-3 lg:px-8 py-4 px-32 "
                       // onClick={submitAll}
                       name="submit"
                       type="submit"

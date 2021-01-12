@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <section className="lg:pt-32 lg:pb-20 py-8 px-4">
       <div className="container-footer">
-        <div className="border-solid border border-black wrapper-footer border-r-0 border-l-0 md:border-r-1 md:border-l-1">
+        <div className="border-solid border border-black wrapper-footer border-r-0 border-l-0 md:border-r md:border-l">
           <div className="col-footer col-info">
             <div className="w-full">
               <h3>(0361) 732873</h3>

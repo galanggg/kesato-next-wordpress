@@ -6,7 +6,7 @@ import ParagraphAnimation from './ParagraphAnimation'
 const BrandIdentity = () => {
   return (
     <section id="brandidentity-id">
-      <div className="breadcrumbs lg:px-o px-8">
+      <div className="breadcrumbs lg:px-0 px-8">
         <nav class="bg-grey-light lg:text-base text-sm rounded font-sans w-full ">
           <ol class="list-reset flex text-grey-dark">
             <li>
