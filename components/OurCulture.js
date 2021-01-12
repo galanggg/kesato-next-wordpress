@@ -83,7 +83,7 @@ const OurCulture = () => {
                 <ImageAnimation source="culture2.jpg" />
               </div>
             </div>
-            <div className=" lg:w-8/12 w-full lg:pr-6 lg:leading-loose lg:pt-0 pt-8 leading-relaxed">
+            <div className=" lg:w-8/12 w-full lg:pl-8 lg:leading-loose lg:pt-0 pt-8 leading-relaxed">
               <ParagraphAnimation>
                 <p className="pb-5">
                   Lorem Ipsum has been the industry's standard dummy text ever
