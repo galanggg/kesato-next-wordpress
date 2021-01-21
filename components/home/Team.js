@@ -227,7 +227,9 @@ const Team = () => {
             </ParagraphAnimation>
             <div className="see-more">
               <PerLineAnimate>
-                <a href=""> See More Detail </a>
+                <Link href="/">
+                  <a> See More Detail</a>
+                </Link>
               </PerLineAnimate>
             </div>
           </div>

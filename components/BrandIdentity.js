@@ -10,25 +10,25 @@ const BrandIdentity = () => {
         <nav class="bg-grey-light lg:text-base text-sm rounded font-sans w-full ">
           <ol class="list-reset flex text-grey-dark">
             <li>
-              <a href="#" class="text-blue">
-                home
-              </a>
+              <Link href="/">
+                <a class="text-blue">home</a>
+              </Link>
             </li>
             <li>
               <span class="mx-2">/</span>
             </li>
             <li>
-              <a href="#" class="text-blue">
-                services
-              </a>
+              <Link href="/">
+                <a class="text-blue">about us</a>
+              </Link>
             </li>
             <li>
               <span class="mx-2">/</span>
             </li>
             <li>
-              <a href="#" class="text-blue ">
-                creative
-              </a>
+              <Link href="/">
+                <a class="text-blue">creative</a>
+              </Link>
             </li>
           </ol>
         </nav>

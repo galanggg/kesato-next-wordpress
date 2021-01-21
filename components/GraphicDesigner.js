@@ -125,7 +125,9 @@ const GraphicDesigner = () => {
 
                 <div className="see-more">
                   <PerLineAnimate>
-                    <a href=""> Learn More </a>
+                    <Link href="/">
+                      <a> Learn More</a>
+                    </Link>
                   </PerLineAnimate>
                 </div>
               </div>

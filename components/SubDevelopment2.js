@@ -120,7 +120,9 @@ const SubDevelopment2 = () => {
                 and scrambled it to make a type specimen book.
               </p>
               <div className="see-more">
-                <a href=""> Learn More </a>
+                <Link href="/">
+                  <a>Learn More</a>
+                </Link>
               </div>
             </div>
           </div>

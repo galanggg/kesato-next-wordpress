@@ -20,7 +20,9 @@ const SubDevelopment1 = () => {
               scrambled it to make a type specimen book.
             </p>
             <div className="see-more">
-              <a href=""> Learn More </a>
+              <Link href="/">
+                <a>Learn More</a>
+              </Link>
             </div>
           </div>
           <div className="relative w-6/12">

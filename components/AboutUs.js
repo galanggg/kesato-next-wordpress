@@ -10,17 +10,17 @@ const AboutUs = () => {
         <nav class="bg-grey-light rounded font-sans w-full ">
           <ol class="list-reset flex text-grey-dark">
             <li>
-              <a href="#" class="text-blue ">
-                home
-              </a>
+              <Link href="#">
+                <a class="text-blue">home</a>
+              </Link>
             </li>
             <li>
               <span class="mx-2">/</span>
             </li>
             <li>
-              <a href="#" class="text-blue ">
-                about us
-              </a>
+              <Link href="#">
+                <a class="text-blue">about us</a>
+              </Link>
             </li>
           </ol>
         </nav>
