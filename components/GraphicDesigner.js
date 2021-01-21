@@ -1,4 +1,5 @@
 import AgencyLogoAnimate from './AgencyLogoAnimate'
+import Link from 'next/link'
 import HeaderAnimation from './HeaderAnimation'
 import ImageAnimation from './ImageAnimation'
 import ParagraphAnimation from './ParagraphAnimation'

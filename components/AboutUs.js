@@ -1,4 +1,5 @@
 import AgencyLogoAnimate from './AgencyLogoAnimate'
+import Link from 'next/link'
 import ImageAnimation from './ImageAnimation'
 import ParagraphAnimation from './ParagraphAnimation'
 import PerLineAnimate from './PerLineAnimate'
@@ -10,7 +11,7 @@ const AboutUs = () => {
         <nav class="bg-grey-light rounded font-sans w-full ">
           <ol class="list-reset flex text-grey-dark">
             <li>
-              <Link href="#">
+              <Link href="/">
                 <a class="text-blue">home</a>
               </Link>
             </li>
@@ -18,7 +19,7 @@ const AboutUs = () => {
               <span class="mx-2">/</span>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/">
                 <a class="text-blue">about us</a>
               </Link>
             </li>

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import ReactPlayer from 'react-player/lazy'
 import { Power2, gsap } from 'gsap'
+import Link from 'next/link'
 import ParagraphAnimation from '../ParagraphAnimation'
 import PerLineAnimate from '../PerLineAnimate'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'

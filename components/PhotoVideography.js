@@ -1,4 +1,5 @@
 import ImageAnimation from './ImageAnimation'
+import Link from 'next/link'
 
 const PhotoVideography = () => {
   return (
