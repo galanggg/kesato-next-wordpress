@@ -28,7 +28,7 @@
     "sass": "^1.26.10",
     "scroll-triggers": "^4.3.0",
     "styled-components": "^5.1.1",
-    "swiper": "^6.3.5",
+    "swiper": "^6.5.1",
     "twin.macro": "^1.7.0"
   },
   "devDependencies": {
